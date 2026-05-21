@@ -1,0 +1,251 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Sidebar */
+.content-sidebar {
+  width: 280px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.content-sidebar h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.section-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-btn {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.section-btn:hover {
+  color: var(--text);
+  border-color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.section-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Main Content */
+.content-main {
+  flex: 1;
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.section-content h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-content h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-content h4 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-content p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.section-content ul, .section-content ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-content li {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.section-content strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Special Content Boxes */
+.formula-box {
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.formula-box strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.value-card {
+  background: rgba(139, 92, 246, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+  margin: 1rem 0;
+}
+
+.value-card h4 {
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+.timeline-box {
+  background: rgba(236, 72, 153, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  margin: 1rem 0;
+}
+
+.timeline-item {
+  padding: 1rem 0;
+  color: var(--text-muted);
+}
+
+.timeline-item strong {
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.practical-box {
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--success-color);
+  margin: 1.5rem 0;
+}
+
+.practical-box p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.practical-box strong {
+  color: var(--success-color);
+}
+
+/* Scrollbar */
+.content-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-main::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+.content-main::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.content-main::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .content-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .section-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-main {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 1rem;
+  }
+
+  .content-sidebar {
+    padding: 1rem;
+  }
+
+  .content-main {
+    padding: 1.5rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .section-nav {
+    grid-template-columns: 1fr;
+  }
+}
