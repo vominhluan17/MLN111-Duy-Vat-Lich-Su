@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #c41e3a;
+  --secondary-color: #e74c3c;
+  --accent-color: #d4a574;
+  --background: #f5f1e8;
+  --surface: #faf8f3;
+  --text: #2c2c2c;
+  --text-muted: #666666;
+  --text-h: #ffffff;
+  --code-bg: #f0f0f0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +25,8 @@ html, body, #root {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
+  background: var(--background);
+  color: var(--text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,14 +37,54 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
 
 code {
   font-size: 15px;
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }

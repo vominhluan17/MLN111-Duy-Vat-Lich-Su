@@ -176,11 +176,11 @@ export default function Game({ setCurrentPage }) {
 
   const getScoreMessage = () => {
     const percentage = (score / questions.length) * 100
-    if (percentage === 100) return "🏆 Xuất Sắc! Bạn là chuyên gia về chủ đề!"
-    if (percentage >= 80) return "🌟 Rất Tốt! Bạn đã nắm vững kiến thức chủ yếu"
-    if (percentage >= 60) return "👍 Tốt! Bạn có kiến thức nhất định, cần ôn thêm"
-    if (percentage >= 40) return "📚 Bình Thường, Hãy ôn lại nội dung"
-    return "💪 Cố Gắng Tiếp! Nên đọc kỹ nội dung lại"
+    if (percentage === 100) return "Xuất Sắc! Bạn là chuyên gia về chủ đề!"
+    if (percentage >= 80) return "Rất Tốt! Bạn đã nắm vững kiến thức chủ yếu"
+    if (percentage >= 60) return "Tốt! Bạn có kiến thức nhất định, cần ôn thêm"
+    if (percentage >= 40) return "Bình Thường, Hãy ôn lại nội dung"
+    return "Cố Gắng Tiếp! Nên đọc kỹ nội dung lại"
   }
 
   return (
@@ -194,11 +194,11 @@ export default function Game({ setCurrentPage }) {
       <div className="game-container">
         {gameMode === 'menu' && (
           <div className="menu-section">
-            <h1>🎮 Trò Chơi Ôn Tập Kiến Thức</h1>
+            <h1>Trò Chơi Ôn Tập Kiến Thức</h1>
             <p>Kiểm tra kiến thức của bạn về chủ nghĩa duy vật lịch sử thông qua các câu hỏi thú vị</p>
             <div className="menu-options">
               <div className="quiz-info">
-                <h3>📝 Quiz Trắc Nghiệm</h3>
+                <h3>Quiz Trắc Nghiệm</h3>
                 <p>Trả lời 10 câu hỏi để kiểm tra kiến thức</p>
                 <button className="btn btn-primary" onClick={handleStartQuiz}>
                   Bắt Đầu Quiz
@@ -248,7 +248,7 @@ export default function Game({ setCurrentPage }) {
               {showResult && (
                 <div className={`result-box ${selectedAnswer === questions[currentQuestion].correct ? 'correct' : 'incorrect'}`}>
                   <h3>
-                    {selectedAnswer === questions[currentQuestion].correct ? '✅ Đúng!' : '❌ Sai!'}
+                    {selectedAnswer === questions[currentQuestion].correct ? 'Đúng!' : 'Sai!'}
                   </h3>
                   <p className="explanation">{questions[currentQuestion].explanation}</p>
                   <button className="btn btn-next" onClick={handleNextQuestion}>
@@ -263,7 +263,7 @@ export default function Game({ setCurrentPage }) {
         {gameOver && (
           <div className="result-section">
             <div className="final-score">
-              <h1>🎉 Kết Quả Cuối Cùng</h1>
+              <h1>Kết Quả Cuối Cùng</h1>
               <div className="score-display">
                 <span className="score-number">{score}</span>
                 <span className="score-total">/ {questions.length}</span>
@@ -275,14 +275,14 @@ export default function Game({ setCurrentPage }) {
             </div>
 
             <div className="review-section">
-              <h3>📋 Đáp Án Chi Tiết</h3>
+              <h3>Đáp Án Chi Tiết</h3>
               <div className="review-list">
                 {answerList.map((item, index) => (
                   <div key={index} className={`review-item ${item.isCorrect ? 'correct' : 'incorrect'}`}>
                     <div className="review-header">
                       <span className="review-number">Câu {index + 1}</span>
                       <span className={`review-status ${item.isCorrect ? 'correct' : 'incorrect'}`}>
-                        {item.isCorrect ? '✅ Đúng' : '❌ Sai'}
+                        {item.isCorrect ? 'Đúng' : 'Sai'}
                       </span>
                     </div>
                     <p className="review-question">{item.question}</p>

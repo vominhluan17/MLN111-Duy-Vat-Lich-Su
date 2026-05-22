@@ -6,7 +6,7 @@ export default function Content({ setCurrentPage }) {
 
   const contentSections = {
     overview: {
-      title: '📋 Tổng Quan',
+      title: 'Tổng Quan',
       content: `
         <h3>Đề Bài Thuyết Trình</h3>
         <p>Sinh viên ngày nay có điều kiện sống cao hơn, tiếp cận quốc tế nhiều hơn. Nhiều giá trị cũ (như "an phận", "nghe lời cha mẹ", "ổn định là tốt") đang bị chất vấn. Một số giá trị mới như tự do cá nhân, đa dạng giới, cân bằng công việc - cuộc sống... ngày càng phổ biến.</p>
@@ -20,7 +20,7 @@ export default function Content({ setCurrentPage }) {
       `
     },
     theory: {
-      title: '🔬 Lý Thuyết Chủ Nghĩa Duy Vật Lịch Sử',
+      title: 'Lý Thuyết Chủ Nghĩa Duy Vật Lịch Sử',
       content: `
         <h3>Khái Niệm Cơ Bản</h3>
         <p>Chủ nghĩa duy vật lịch sử là phương pháp phân tích xã hội dựa trên cơ sở rằng sự phát triển kinh tế-xã hội là nhân tố quyết định sự thay đổi xã hội.</p>
@@ -28,7 +28,7 @@ export default function Content({ setCurrentPage }) {
         <h3>Mối Quan Hệ Giữa Cơ Sở Hạ Tầng và Kiến Trúc Thượng Tầng</h3>
         <div class="formula-box">
           <strong>Cơ Sở Hạ Tầng (Base)</strong>
-          <p>⬇️ Tác động ⬇️</p>
+          <p>Tác động</p>
           <strong>Kiến Trúc Thượng Tầng (Superstructure)</strong>
         </div>
         
@@ -50,12 +50,12 @@ export default function Content({ setCurrentPage }) {
       `
     },
     oldValues: {
-      title: '👴 Giá Trị Truyền Thống',
+      title: 'Giá Trị Truyền Thống',
       content: `
         <h3>Các Giá Trị Cũ Đang Bị Chất Vấn</h3>
         
         <div class="value-card">
-          <h4>1️⃣ "An Phận"</h4>
+          <h4>1. "An Phận"</h4>
           <p><strong>Định Nghĩa:</strong> Chấp nhận số phận, không cố gắng thay đổi, hài lòng với những gì hiện có</p>
           <p><strong>Bối Cảnh Lịch Sử:</strong> Phát sinh trong xã hội nông nghiệp, khi con người phụ thuộc vào thiên nhiên và tầng lớp phong kiến kiên định</p>
           <p><strong>Tác Động Kinh Tế:</strong> Duy trì ổn định xã hội trong điều kiện sản xuất bị hạn chế, các mối quan hệ sản xuất chậm phát triển</p>
@@ -63,7 +63,7 @@ export default function Content({ setCurrentPage }) {
         </div>
         
         <div class="value-card">
-          <h4>2️⃣ "Nghe Lời Cha Mẹ"</h4>
+          <h4>2. "Nghe Lời Cha Mẹ"</h4>
           <p><strong>Định Nghĩa:</strong> Tuyệt đối tuân theo quyết định của cha mẹ, không có tiếng nói riêng</p>
           <p><strong>Bối Cảnh Lịch Sử:</strong> Xã hội Phong Kiến - Nông Nghiệp: Gia đình là đơn vị sản xuất cơ bản, cha mẹ là những người kinh nghiệm nhất</p>
           <p><strong>Cơ Sở Kinh Tế:</strong> Cơ sở hạ tầng kinh tế đơn giản = hệ thống giá trị dựa trên quyền lực cấp bậc (cha - con, nam - nữ, già - trẻ)</p>
@@ -71,7 +71,7 @@ export default function Content({ setCurrentPage }) {
         </div>
         
         <div class="value-card">
-          <h4>3️⃣ "Ổn Định Là Tốt"</h4>
+          <h4>3. "Ổn Định Là Tốt"</h4>
           <p><strong>Định Nghĩa:</strong> Giá trị cao nhất là có một việc làm lâu dài, ổn định, không mạo hiểm</p>
           <p><strong>Bối Cảnh Lịch Sử:</strong> Thế kỷ 20 - Xã hội chuyển đổi: Mô hình công nghiệp ổn định, việc làm còn hạn chế</p>
           <p><strong>Điều Kiện Kinh Tế Xã Hội:</strong> Tình trạng thiếu nước, thiếu thốc, chưa phát triển → ổn định = sống sót, có bảo hiểm xã hội</p>
@@ -80,12 +80,12 @@ export default function Content({ setCurrentPage }) {
       `
     },
     newValues: {
-      title: '🌟 Giá Trị Mới Nổi Lên',
+      title: 'Giá Trị Mới Nổi Lên',
       content: `
         <h3>Các Giá Trị Mới Ngày Càng Phổ Biến</h3>
         
         <div class="value-card">
-          <h4>🎯 Tự Do Cá Nhân</h4>
+          <h4>Tự Do Cá Nhân</h4>
           <p><strong>Định Nghĩa:</strong> Quyền lựa chọn của cá nhân: công việc, sở thích, lối sống, quan điểm chính trị</p>
           <p><strong>Bối Cảnh Kinh Tế-Xã Hội:</strong></p>
           <ul>
@@ -97,7 +97,7 @@ export default function Content({ setCurrentPage }) {
         </div>
         
         <div class="value-card">
-          <h4>🌈 Đa Dạng Giới</h4>
+          <h4>Đa Dạng Giới</h4>
           <p><strong>Định Nghĩa:</strong> Tôn trọng và công nhận sự đa dạng về giới tính, bộ máy tình cảm, quan hệ tình dục</p>
           <p><strong>Bối Cảnh Kinh Tế-Xã Hội:</strong></p>
           <ul>
@@ -110,7 +110,7 @@ export default function Content({ setCurrentPage }) {
         </div>
         
         <div class="value-card">
-          <h4>⚖️ Cân Bằng Công Việc - Cuộc Sống (Work-Life Balance)</h4>
+          <h4>Cân Bằng Công Việc - Cuộc Sống (Work-Life Balance)</h4>
           <p><strong>Định Nghĩa:</strong> Không hy sinh toàn bộ cuộc sống cá nhân cho công việc, cần thời gian cho bản thân, gia đình, sở thích</p>
           <p><strong>Bối Cảnh Kinh Tế-Xã Hội:</strong></p>
           <ul>
@@ -124,7 +124,7 @@ export default function Content({ setCurrentPage }) {
       `
     },
     analysis: {
-      title: '🔍 Phân Tích Biện Chứng',
+      title: 'Phân Tích Biện Chứng',
       content: `
         <h3>Mối Quan Hệ Giữa Kinh Tế - Xã Hội và Giá Trị</h3>
         
@@ -193,7 +193,7 @@ export default function Content({ setCurrentPage }) {
       `
     },
     conclusion: {
-      title: '✅ Kết Luận',
+      title: 'Kết Luận',
       content: `
         <h3>Những Điểm Chính</h3>
         <ol>

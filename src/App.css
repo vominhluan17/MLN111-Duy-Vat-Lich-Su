@@ -5,19 +5,19 @@
 }
 
 :root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #ec4899;
+  --primary-color: #c41e3a;
+  --secondary-color: #e74c3c;
+  --accent-color: #d4a574;
   --success-color: #10b981;
   --error-color: #ef4444;
-  --background: #0f172a;
-  --surface: #1e293b;
-  --surface-light: #334155;
-  --text: #f1f5f9;
-  --text-muted: #cbd5e1;
-  --border: #475569;
+  --background: #f5f1e8;
+  --surface: #faf8f3;
+  --surface-light: #f0e8dc;
+  --text: #2c2c2c;
+  --text-muted: #666666;
+  --text-h: #ffffff;
+  --border: #d0c8bc;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--background);
@@ -29,6 +29,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 96px; /* prevent sticky navbar from covering content */
 }
 
 /* Navbar Chung */
@@ -132,4 +133,8 @@ body {
     width: 100%;
     justify-content: center;
   }
+}
+
+@media (max-width: 768px) {
+  .app { padding-top: 88px; }
 }
