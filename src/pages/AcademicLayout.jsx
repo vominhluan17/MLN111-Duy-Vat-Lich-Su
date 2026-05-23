@@ -88,28 +88,6 @@ export default function AcademicLayout({ setCurrentPage }) {
             </article>
 
             {/* Video Card - placed under Thực Tiện / Đối thoại Thế hệ */}
-            <article className="content-card video-card">
-              <div className="card-image">
-                <div className="card-tag">VT</div>
-                <div className="card-image-content">
-                  <div className="card-image-number">V</div>
-                  <div className="card-image-label">Video Thực Tiễn</div>
-                </div>
-              </div>
-              <div className="card-content">
-                <div>
-                  <div className="card-meta">Chuyên Mục: Đối Thoại Thế Hệ</div>
-                  <h2 className="card-title">Câu chuyện Làng Vĩnh An: Khi "Ổn định" nhường chỗ cho "Đặc quyền lựa chọn"</h2>
-                  <p className="card-description">Video kể về Làng Vĩnh An — minh hoạ mâu thuẫn giữa giá trị "ổn định" của ông Tư và sự trỗi dậy của nhu cầu lựa chọn ở thế hệ trẻ. Đoạn phim là điểm nối thực tiễn để phân tích theo góc nhìn duy vật lịch sử: cơ sở vật chất và điều kiện sinh hoạt thay đổi tạo ra chuyển dịch trong kiến trúc thượng tầng, dẫn tới biến đổi hệ giá trị.</p>
-                  <div className="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5wPtaLLdQKk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                  </div>
-                  <p className="video-caption">Caption: "Ổn định" của ông Tư liên hệ trực tiếp đến khái niệm 'an phận' — video cho thấy khác biệt bối cảnh sản sinh ra khác biệt nhận thức giữa các thế hệ. Hãy xem video và suy nghĩ: khi điều kiện tồn tại thay đổi, liệu đánh giá về giá trị có thể bền vững hay phải biến đổi?</p>
-                </div>
-                <div className="card-cta" onClick={() => handleMenuClick('content')}>Xem thêm</div>
-              </div>
-            </article>
-
             <article className="content-card">
               <div className="card-image">
                 <div className="card-tag">03</div>
@@ -141,6 +119,29 @@ export default function AcademicLayout({ setCurrentPage }) {
                   <div className="card-meta">Phần 4: Độc Lập Tương Đối</div>
                   <h2 className="card-title">Tính Độc Lập của Ý Thức Xã Hội</h2>
                   <p className="card-description">Ý thức xã hội có tính độc lập tương đối; giá trị cũ thích nghi và hòa nhập với điều kiện mới.</p>
+                </div>
+                <div className="card-cta" onClick={() => handleMenuClick('content')}>Nghiên cứu</div>
+              </div>
+            </article>
+
+            {/* Video Card V - Placed AFTER theoretical section */}
+            <article className="content-card video-card">
+              <div className="card-image">
+                <div className="card-tag">V</div>
+                <div className="card-image-content">
+                  <div className="card-image-number">V</div>
+                  <div className="card-image-label">Video Thực Tiễn</div>
+                </div>
+              </div>
+              <div className="card-content">
+                <div>
+                  <div className="card-meta">Chuyên Mục: Đối Thoại Thế Hệ</div>
+                  <h2 className="card-title">Câu chuyện Làng Vĩnh An: Khi "Ổn định" nhường chỗ cho "Đặc quyền lựa chọn"</h2>
+                  <p className="card-description">Video kể về Làng Vĩnh An — minh hoạ mâu thuẫn giữa giá trị "ổn định" của ông Tư và sự trỗi dậy của nhu cầu lựa chọn ở thế hệ trẻ. Đoạn phim là điểm nối thực tiễn để phân tích theo góc nhìn duy vật lịch sử: cơ sở vật chất và điều kiện sinh hoạt thay đổi tạo ra chuyển dịch trong kiến trúc thượng tầng, dẫn tới biến đổi hệ giá trị.</p>
+                  <div className="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5wPtaLLdQKk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  </div>
+                  <p className="video-caption">Caption: "Ổn định" của ông Tư liên hệ trực tiếp đến khái niệm 'an phận' — video cho thấy khác biệt bối cảnh sản sinh ra khác biệt nhận thức giữa các thế hệ. Hãy xem video và suy nghĩ: khi điều kiện tồn tại thay đổi, liệu đánh giá về giá trị có thể bền vững hay phải biến đổi?</p>
                 </div>
                 <div className="card-cta" onClick={() => handleMenuClick('content')}>Nghiên cứu</div>
               </div>
