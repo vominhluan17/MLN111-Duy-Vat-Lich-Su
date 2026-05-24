@@ -1,14 +1,21 @@
-import { useState } from 'react'
-import '../styles/Game.css'
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Navbar } from '../components/layout/Navbar';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Trophy, ArrowRight, RotateCcw, Home, CheckCircle2, XCircle } from 'lucide-react';
 
 export default function Game({ setCurrentPage }) {
-  const [gameMode, setGameMode] = useState('menu')
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [score, setScore] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [showResult, setShowResult] = useState(false)
-  const [gameOver, setGameOver] = useState(false)
-  const [answerList, setAnswerList] = useState([])
+  const [gameMode, setGameMode] = useState('menu');
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showResult, setShowResult] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const questions = [
     {
@@ -65,249 +72,175 @@ export default function Game({ setCurrentPage }) {
       ],
       correct: 1,
       explanation: "Giá trị thích nghi với bối cảnh: cũ là ổn định tuyệt đối, mới là khả năng thích ứng."
-    },
-    {
-      question: "Mâu Thuẫn Chính Giữa Cha Mẹ Và Con Em Hiện Nay Xuất Phát Từ Nguyên Nhân Nào?",
-      options: [
-        "Con em không hiếu thảo",
-        "Kinh tế phát triển không đồng bộ: thành phố phát triển nhanh → giá trị thay đổi nhanh | Nông thôn chậm → giá trị vẫn cũ",
-        "Cha mẹ luôn sai",
-        "Không có mâu thuẫn gì"
-      ],
-      correct: 1,
-      explanation: "Phát triển không đồng bộ dẫn đến sự chênh lệch giá trị giữa các nhóm, thế hệ."
-    },
-    {
-      question: "Biểu Hiện Nào Chứng Minh Giá Trị 'Đa Dạng Giới' Đang Phát Triển?",
-      options: [
-        "Phụ nữ độc lập kinh tế → không bị ép nhập cuộc hôn nhân",
-        "LGBTQ+ có tiếng nói vì xã hội trở nên giàu có",
-        "Công việc không phụ thuộc vào giới tính → phụ nữ có cơ hội bằng nam giới",
-        "Tất cả các câu trên"
-      ],
-      correct: 3,
-      explanation: "Giá trị đa dạng giới biểu hiện qua nhiều khía cạnh: kinh tế, chính trị, xã hội."
-    },
-    {
-      question: "Theo Chủ Nghĩa Duy Vật Lịch Sử, Yếu Tố Nào Quyết Định Sự Thay Đổi Xã Hội?",
-      options: [
-        "Ý thức của con người",
-        "Sự phát triển kinh tế - xã hội (cơ sở hạ tầng)",
-        "Lý thuyết chính trị",
-        "Sự khôn ngoan của các nhà lãnh đạo"
-      ],
-      correct: 1,
-      explanation: "Cơ sở hạ tầng kinh tế-xã hội là yếu tố quyết định, tác động đến kiến trúc thượng tầng."
-    },
-    {
-      question: "Giá Trị 'Nghe Lời Cha Mẹ' Có Hoàn Toàn Biến Mất Trong Xã Hội Hiện Đại Không?",
-      options: [
-        "Có, nó lỗi thời hoàn toàn",
-        "Không, nó thích nghi: từ 'bất lợi tuyệt đối' → 'tôn trọng ý kiến, nhưng vẫn có quyền quyết định'",
-        "Đó là câu hỏi sai",
-        "Giá trị này chỉ tồn tại ở nông thôn"
-      ],
-      correct: 1,
-      explanation: "Các giá trị cũ không biến mất mà thích nghi với bối cảnh mới - đây là điều luận biện chứng."
-    },
-    {
-      question: "Nhu Cầu Nào Của Con Người LÀ NỀN TẢNG Theo Hệ Thống Phân Tầng Nhu Cầu Maslow?",
-      options: [
-        "Nhu cầu tự thực hiện bản thân",
-        "Nhu cầu kế tiếp từ sau khi đáp ứng nhu cầu sinh lý và an toàn",
-        "Nhu cầu sinh lý (ăn, ở, ngủ) và an toàn",
-        "Nhu cầu xã hội"
-      ],
-      correct: 2,
-      explanation: "Khi nhu cầu cơ bản được thỏa mãn, con người mới tìm tới tự do cá nhân và tự thực hiện."
     }
-  ]
+  ];
 
   const handleStartQuiz = () => {
-    setGameMode('quiz')
-    setCurrentQuestion(0)
-    setScore(0)
-    setAnswerList([])
-    setShowResult(false)
-    setGameOver(false)
-  }
+    setGameMode('quiz');
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowResult(false);
+    setGameOver(false);
+    setSelectedAnswer(null);
+  };
 
   const handleAnswerClick = (index) => {
-    if (!selectedAnswer && !showResult) {
-      setSelectedAnswer(index)
-      setShowResult(true)
-      
-      const isCorrect = index === questions[currentQuestion].correct
-      const newScore = isCorrect ? score + 1 : score
-      
-      setAnswerList([
-        ...answerList,
-        {
-          question: questions[currentQuestion].question,
-          selected: index,
-          correct: questions[currentQuestion].correct,
-          isCorrect
-        }
-      ])
-      
-      setScore(newScore)
+    if (selectedAnswer === null) {
+      setSelectedAnswer(index);
+      setShowResult(true);
+      if (index === questions[currentQuestion].correct) {
+        setScore(score + 1);
+      }
     }
-  }
+  };
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1)
-      setSelectedAnswer(null)
-      setShowResult(false)
+      setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer(null);
+      setShowResult(false);
     } else {
-      setGameOver(true)
+      setGameOver(true);
     }
-  }
-
-  const handleRestart = () => {
-    setGameMode('menu')
-    setCurrentQuestion(0)
-    setScore(0)
-    setSelectedAnswer(null)
-    setShowResult(false)
-    setGameOver(false)
-    setAnswerList([])
-  }
+  };
 
   const getScoreMessage = () => {
-    const percentage = (score / questions.length) * 100
-    if (percentage === 100) return "Xuất Sắc! Bạn là chuyên gia về chủ đề!"
-    if (percentage >= 80) return "Rất Tốt! Bạn đã nắm vững kiến thức chủ yếu"
-    if (percentage >= 60) return "Tốt! Bạn có kiến thức nhất định, cần ôn thêm"
-    if (percentage >= 40) return "Bình Thường, Hãy ôn lại nội dung"
-    return "Cố Gắng Tiếp! Nên đọc kỹ nội dung lại"
-  }
+    const percentage = (score / questions.length) * 100;
+    if (percentage === 100) return "Xuất Sắc! Bạn đã nắm vững kiến thức.";
+    if (percentage >= 80) return "Rất Tốt! Kiến thức của bạn rất vững chắc.";
+    return "Cố gắng hơn! Hãy xem lại nội dung bài học.";
+  };
 
   return (
-    <div className="game">
-      <nav className="navbar">
-        <button className="back-btn" onClick={() => setCurrentPage('home')}>← Về Trang Chủ</button>
-        <div className="logo">Trò Chơi Ôn Tập</div>
-        <button className="nav-link" onClick={() => setCurrentPage('content')}>Xem Nội Dung →</button>
-      </nav>
+    <div className="min-h-screen bg-background text-white">
+      <Navbar setCurrentPage={setCurrentPage} />
 
-      <div className="game-container">
-        {gameMode === 'menu' && (
-          <div className="menu-section">
-            <h1>Trò Chơi Ôn Tập Kiến Thức</h1>
-            <p>Kiểm tra kiến thức của bạn về chủ nghĩa duy vật lịch sử thông qua các câu hỏi thú vị</p>
-            <div className="menu-options">
-              <div className="quiz-info">
-                <h3>Quiz Trắc Nghiệm</h3>
-                <p>Trả lời 10 câu hỏi để kiểm tra kiến thức</p>
-                <button className="btn btn-primary" onClick={handleStartQuiz}>
-                  Bắt Đầu Quiz
-                </button>
+      <main className="max-w-4xl mx-auto pt-40 pb-20 px-6">
+        <AnimatePresence mode="wait">
+          {gameMode === 'menu' && (
+            <motion.div
+              key="menu"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-accent/20">
+                <Trophy className="w-10 h-10 text-accent" />
               </div>
-            </div>
-          </div>
-        )}
+              <h1 className="text-5xl font-bold mb-6 tracking-tight">Trò Chơi Ôn Tập</h1>
+              <p className="text-xl text-secondary mb-12 max-w-lg mx-auto leading-relaxed">
+                Thử thách bản thân với bộ câu hỏi trắc nghiệm về Chủ nghĩa Duy vật Lịch sử.
+              </p>
+              <Button onClick={handleStartQuiz} className="text-lg px-12 py-4">
+                Bắt đầu ngay
+              </Button>
+            </motion.div>
+          )}
 
-        {gameMode === 'quiz' && !gameOver && (
-          <div className="quiz-section">
-            <div className="quiz-header">
-              <div className="quiz-progress">
-                <div className="progress-bar">
-                  <div 
-                    className="progress-fill" 
-                    style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-                  ></div>
+          {gameMode === 'quiz' && !gameOver && (
+            <motion.div
+              key="quiz"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+            >
+              <div className="mb-12">
+                <div className="flex justify-between items-end mb-4">
+                  <span className="text-sm font-bold text-accent uppercase tracking-widest">
+                    Câu hỏi {currentQuestion + 1} / {questions.length}
+                  </span>
+                  <span className="text-2xl font-bold">{score} Điểm</span>
                 </div>
-                <span>Câu {currentQuestion + 1} / {questions.length}</span>
+                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <motion.div 
+                    className="h-full bg-accent"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                  />
+                </div>
               </div>
-              <div className="quiz-score">
-                Điểm: {score}
-              </div>
-            </div>
 
-            <div className="quiz-content">
-              <h2>{questions[currentQuestion].question}</h2>
-              <div className="options-grid">
-                {questions[currentQuestion].options.map((option, index) => (
-                  <button
-                    key={index}
-                    className={`option-btn ${selectedAnswer === index ? 'selected' : ''} ${
-                      showResult && index === questions[currentQuestion].correct ? 'correct' : ''
-                    } ${
-                      showResult && selectedAnswer === index && index !== questions[currentQuestion].correct ? 'incorrect' : ''
-                    }`}
-                    onClick={() => handleAnswerClick(index)}
-                    disabled={showResult}
-                  >
-                    <span className="option-label">{String.fromCharCode(65 + index)}</span>
-                    <span className="option-text">{option}</span>
-                  </button>
-                ))}
+              <h2 className="text-3xl font-bold mb-10 leading-tight">
+                {questions[currentQuestion].question}
+              </h2>
+
+              <div className="grid grid-cols-1 gap-4 mb-10">
+                {questions[currentQuestion].options.map((option, index) => {
+                  const isSelected = selectedAnswer === index;
+                  const isCorrect = index === questions[currentQuestion].correct;
+                  
+                  let stateStyle = "bg-white/5 border-white/10 text-secondary hover:border-white/30";
+                  if (showResult) {
+                    if (isCorrect) stateStyle = "bg-green-500/10 border-green-500/50 text-green-400";
+                    else if (isSelected) stateStyle = "bg-red-500/10 border-red-500/50 text-red-400";
+                    else stateStyle = "bg-white/5 border-white/5 opacity-50";
+                  } else if (isSelected) {
+                    stateStyle = "bg-accent/10 border-accent text-white";
+                  }
+
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => handleAnswerClick(index)}
+                      disabled={showResult}
+                      className={`p-6 rounded-2xl border-2 text-left transition-all duration-200 flex items-center justify-between group ${stateStyle}`}
+                    >
+                      <span className="font-medium text-lg">{option}</span>
+                      {showResult && isCorrect && <CheckCircle2 className="w-6 h-6" />}
+                      {showResult && isSelected && !isCorrect && <XCircle className="w-6 h-6" />}
+                    </button>
+                  );
+                })}
               </div>
 
               {showResult && (
-                <div className={`result-box ${selectedAnswer === questions[currentQuestion].correct ? 'correct' : 'incorrect'}`}>
-                  <h3>
-                    {selectedAnswer === questions[currentQuestion].correct ? 'Đúng!' : 'Sai!'}
-                  </h3>
-                  <p className="explanation">{questions[currentQuestion].explanation}</p>
-                  <button className="btn btn-next" onClick={handleNextQuestion}>
-                    {currentQuestion === questions.length - 1 ? 'Xem Kết Quả' : 'Câu Tiếp Theo'}
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {gameOver && (
-          <div className="result-section">
-            <div className="final-score">
-              <h1>Kết Quả Cuối Cùng</h1>
-              <div className="score-display">
-                <span className="score-number">{score}</span>
-                <span className="score-total">/ {questions.length}</span>
-              </div>
-              <div className="score-percentage">
-                {((score / questions.length) * 100).toFixed(1)}%
-              </div>
-              <p className="score-message">{getScoreMessage()}</p>
-            </div>
-
-            <div className="review-section">
-              <h3>Đáp Án Chi Tiết</h3>
-              <div className="review-list">
-                {answerList.map((item, index) => (
-                  <div key={index} className={`review-item ${item.isCorrect ? 'correct' : 'incorrect'}`}>
-                    <div className="review-header">
-                      <span className="review-number">Câu {index + 1}</span>
-                      <span className={`review-status ${item.isCorrect ? 'correct' : 'incorrect'}`}>
-                        {item.isCorrect ? 'Đúng' : 'Sai'}
-                      </span>
-                    </div>
-                    <p className="review-question">{item.question}</p>
-                    <div className="review-answers">
-                      <p><strong>Trả lời:</strong> {questions[index].options[item.selected]}</p>
-                      {!item.isCorrect && (
-                        <p><strong>Đáp án đúng:</strong> {questions[index].options[item.correct]}</p>
-                      )}
-                    </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="space-y-8"
+                >
+                  <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4 text-accent" /> Giải thích:
+                    </h4>
+                    <p className="text-secondary leading-relaxed">{questions[currentQuestion].explanation}</p>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <Button onClick={handleNextQuestion} className="w-full py-4 text-lg flex items-center justify-center gap-2">
+                    {currentQuestion === questions.length - 1 ? "Xem kết quả" : "Câu tiếp theo"}
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
 
-            <div className="result-actions">
-              <button className="btn btn-primary" onClick={handleRestart}>
-                Làm Lại Quiz
-              </button>
-              <button className="btn btn-secondary" onClick={() => setCurrentPage('content')}>
-                Xem Lại Nội Dung
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+          {gameOver && (
+            <motion.div
+              key="result"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="luxury-card p-16 text-center"
+            >
+              <Trophy className="w-20 h-20 text-accent mx-auto mb-8" />
+              <h2 className="text-4xl font-bold mb-4">Hoàn thành!</h2>
+              <div className="text-7xl font-bold text-accent mb-6">
+                {score} <span className="text-2xl text-secondary">/ {questions.length}</span>
+              </div>
+              <p className="text-xl text-secondary mb-12">{getScoreMessage()}</p>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button onClick={handleStartQuiz} variant="secondary" className="flex items-center gap-2">
+                  <RotateCcw className="w-4 h-4" /> Thử lại
+                </Button>
+                <Button onClick={() => setCurrentPage('home')} className="flex items-center gap-2">
+                  <Home className="w-4 h-4" /> Về trang chủ
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </main>
     </div>
-  )
+  );
 }
