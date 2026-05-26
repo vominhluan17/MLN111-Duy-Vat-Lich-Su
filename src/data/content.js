@@ -5,28 +5,28 @@ export const conceptsData = [
     id: 1,
     title: "Cơ Sở Hạ Tầng",
     subtitle: "Infrastructure (Kinh tế - Cơ sở vật chất)",
-    description: "Là tổng thể các lực lượng sản xuất, quan hệ sản xuất. Bao gồm: Công cụ lao động, đất đai, máy móc, tư liệu sản xuất, và mối quan hệ giữa các giai cấp trong quá trình sản xuất.",
-    icon: "⚙️",
+    description: "Là toàn bộ những quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội ở một giai đoạn phát triển lịch sử nhất định . Bao gồm: Quan hệ sở hữu về tư liệu sản xuất, quan hệ tổ chức quản lý và quan hệ phân phối sản phẩm",
+    iconName: "Factory",
     color: "from-marx-red-700 to-marx-red-900",
     details: [
-      "Lực lượng sản xuất",
-      "Quan hệ sản xuất",
-      "Chế độ sở hữu",
-      "Quan hệ giai cấp"
+      "Quan hệ sở hữu (Tư liệu sản xuất)",
+      "Quan hệ tổ chức - quản lý",
+      "Quan hệ phân phối"
+      
     ]
   },
   {
     id: 2,
     title: "Kiến Trúc Thượng Tầng",
     subtitle: "Superstructure (Tư tưởng - Chính trị)",
-    description: "Là tổng thể các quan hệ chính trị, pháp luật, tôn giáo, đạo đức, tư tưởng. Nó phản ánh cơ sở hạ tầng và có tác dụng phục vụ cho sự bảo vệ, ổn định cơ sở hạ tầng đó.",
-    icon: "🏛️",
+    description: "Là toàn bộ những quan điểm, tư tưởng xã hội (chính trị, pháp quyền, tôn giáo, đạo đức, triết học...) cùng với những thiết chế tương ứng (Đảng, Nhà nước, Giáo hội, các tổ chức xã hội...) được hình thành trên một cơ sở hạ tầng nhất định .",
+    iconName: "Landmark",
     color: "from-red-600 to-red-800",
     details: [
-      "Quan hệ pháp luật",
-      "Hệ thống chính trị",
-      "Tư tưởng, đạo đức",
-      "Tôn giáo, tập quán"
+      "Quan điểm, tư tưởng ",
+      "Thiết chế chính trị",
+      "Hệ thống pháp quyền",
+      "Tôn giáo, nghệ thuật"
     ]
   }
 ];
@@ -37,21 +37,27 @@ export const dialecticalData = {
   parts: [
     {
       id: 1,
+      label: " Mối Quan Hệ: Quyết định",
       direction: "left-to-right",
       from: "Cơ Sở Hạ Tầng",
       to: "Kiến Trúc Thượng Tầng",
-      relation: "Quyết định",
-      description: "Cơ sở hạ tầng là yếu tố quyết định chính. Thay đổi cơ sở hạ tầng sẽ dẫn đến thay đổi thượng tầng.",
-      examples: ["Cách mạng công nghiệp → Phát triển tư bản", "Kỹ thuật số → Thay đổi pháp luật"],
+      fromIconName: "Settings", 
+      toIconName: "Landmark",
+      mainTheory: "Tồn tại xã hội quyết định Ý thức xã hội",
+      description: "Tương ứng với một cơ sở hạ tầng sẽ sản sinh ra một kiến trúc thượng tầng phù hợp. Khi cơ sở hạ tầng biến đổi thì đòi hỏi kiến trúc thượng tầng sớm muộ cũng sẽ biến đổi theo.",
+      detailsText: "Thực tiễn Gen Z: Khi kinh tế Việt Nam chuyển sang hội nhập toàn cầu, công nghệ số bùng nổ (Cơ sở hạ tầng thay đổi), tất yếu hệ tư tưởng và đạo đức của sinh viên (Kiến trúc thượng tầng) cũng phải lột xác. Những giá trị cũ như \"ổn định\", \"an phận\" dần bị phá vỡ, nhường chỗ cho tư duy \"năng động\", \"tự do cá nhân\" để thích ứng với nền kinh tế mới."
     },
     {
       id: 2,
+      label: " Mối Quan Hệ: Tác động ngược",
       direction: "right-to-left",
       from: "Kiến Trúc Thượng Tầng",
       to: "Cơ Sở Hạ Tầng",
-      relation: "Tác động ngược",
-      description: "Thượng tầng cũng tác động ngược lại cơ sở. Chính sách, pháp luật, tư tưởng có thể thúc đẩy hoặc cản trở sự phát triển của cơ sở.",
-      examples: ["Chính sách khuyến khích sáng tạo → Phát triển kỹ thuật", "Luật lao động → Cải thiện điều kiện sản xuất"],
+      fromIconName: "Landmark",
+      toIconName: "Settings",
+      mainTheory: "Tính độc lập tương đối và Sự phản tác dụng",
+      description: "Kiến trúc thượng tầng không hoàn toàn thụ động mà có tính độc lập tương đối, nó tác động trở lại cơ sở hạ tầng theo hai xu hướng: Tích cực (thúc đẩy) hoặc Tiêu cực (kìm hãm).",
+      detailsText: "Thực tiễn Gen Z: Hệ giá trị, lối sống mới có sức mạnh to lớn. Nếu xã hội thấu hiểu và chấp nhận sự đa dạng, tự do sáng tạo của sinh viên (tác động tích cực), lực lượng lao động trẻ này sẽ thúc đẩy nền kinh tế số phát triển. Ngược lại, nếu ép buộc người trẻ theo lối mòn (tác động tiêu cực), sẽ gây xung đột thế hệ và kìm hãm sức sáng tạo của xã hội."
     }
   ]
 };
@@ -61,46 +67,46 @@ export const timelineData = [
     id: 1,
     period: "Cộng Sản Nguyên Thủy",
     years: "Thời tiền sử",
-    infrastructure: "Công cụ lao động sơ khai, sản xuất tập thể",
-    superstructure: "Bộ lạc, tôn giáo tự nhiên, quan hệ bình đẳng",
-    characteristics: "Không có giai cấp, tài sản chung",
-    icon: "🔥"
+    infrastructure: "Quan hệ sở hữu chung, sản xuất và phân phối bình đẳng",
+    superstructure: "Tổ chức thị tộc/bộ lạc, tín ngưỡng tự nhiên, chưa có nhà nước",
+    characteristics: "Không có giai cấp, không có bóc lột, tài sản chung",
+    iconName: "Flame"
   },
   {
     id: 2,
     period: "Chiếm Hữu Nô Lệ",
-    years: "3000 TCN - 500 SCN",
-    infrastructure: "Nông nghiệp, chăn nuôi, công cụ máy",
-    superstructure: "Nhà nước, pháp luật, tôn giáo (La Mã)",
-    characteristics: "Chủ nô, nô lệ; Sản phẩm để tích lũy",
-    icon: "⚔️"
+    years: "Khoảng 3000 TCN - 500 SCN",
+    infrastructure: "Chủ nô sở hữu tuyệt đối tư liệu sản xuất và thân thể người nô lệ",
+    superstructure: "Nhà nước chủ nô, pháp luật hà khắc, tư tưởng tôn giáo sơ khai", 
+    characteristics: "Giai cấp: Chủ nô - Nô lệ; Quan hệ bóc lột tàn bạo",
+    iconName: "Swords"
   },
   {
     id: 3,
     period: "Phong Kiến",
-    years: "500 - 1500 SCN",
-    infrastructure: "Nông nghiệp phong kiến, thủ công, thương mại địa phương",
-    superstructure: "Phong kiến quân chủ, Công giáo, đạo đức trung thành",
-    characteristics: "Địa chủ, nông dân; Kinh tế tự cấp",
-    icon: "🏰"
+    years: "Khoảng 500 - 1500 SCN",
+    infrastructure: "Địa chủ sở hữu ruộng đất, bóc lột nông dân/nông nô bằng địa tô",
+    superstructure: "Nhà nước quân chủ chuyên chế, hệ tư tưởng tôn giáo/thần học (Nho giáo, Công giáo...)", 
+    characteristics: "Giai cấp: Địa chủ - Nông dân; Kinh tế tự cấp tự túc",
+    iconName: "Castle"
   },
   {
     id: 4,
     period: "Tư Bản Chủ Nghĩa",
-    years: "1500 - Nay",
-    infrastructure: "Công nghiệp, máy móc, công nghệ, tài chính toàn cầu",
-    superstructure: "Nhà nước tư sản, dân chủ, pháp luật tư bản",
-    characteristics: "Chủ tư bản, công nhân; Lợi nhuận, thị trường",
-    icon: "🏭"
+    years: "Khoảng 1500 - Nay",
+    infrastructure: "Sở hữu tư nhân tư bản chủ nghĩa, bóc lột giá trị thặng dư",
+    superstructure: "Nhà nước tư sản, pháp quyền tư sản, hệ tư tưởng đề cao chủ nghĩa cá nhân", 
+    characteristics: "Giai cấp: Tư sản - Vô sản; Kinh tế thị trường, tối đa hóa lợi nhuận",
+    iconName: "Factory"
   },
   {
     id: 5,
-    period: "Xã Hội Chủ Nghĩa",
-    years: "1917 - ",
-    infrastructure: "Sở hữu công cộng, kinh tế kế hoạch & thị trường",
-    superstructure: "Nhà nước công nhân, chủ nghĩa xã hội, tư tưởng khoa học",
-    characteristics: "Công nhân, nông dân; Xóa bỏ giai cấp",
-    icon: "🚀"
+    period: "Cộng Sản Chủ Nghĩa",
+    years: "1917 - Tương lai",
+    infrastructure: "Sở hữu công cộng về tư liệu sản xuất chủ yếu, xóa bỏ bóc lột",
+    superstructure: "Nhà nước chuyên chính vô sản, hệ tư tưởng Mác - Lênin khoa học", 
+    characteristics: "Giai đoạn thấp là XHCN; Xóa bỏ đối kháng giai cấp, giải phóng con người",
+    iconName: "Rocket"
   }
 ];
 
@@ -112,7 +118,7 @@ export const caseStudiesData = [
     infrastructure: "Công nghệ cloud, thuật toán AI, dữ liệu lớn",
     superstructure: "Luật về bảo vệ dữ liệu, quy định nội dung, chính sách",
     impact: "Mạng xã hội thay đổi cách chính trị hoạt động → chính phủ phải cập nhật luật pháp",
-    emoji: "📱"
+    iconName: "Smartphone"
   },
   {
     id: 2,
@@ -121,7 +127,7 @@ export const caseStudiesData = [
     infrastructure: "Robot, AI, tự động hóa, công nghệ máy tính",
     superstructure: "Luật lao động, bảo hiểm xã hội, chính sách việc làm",
     impact: "Công nghệ tự động → Thất nghiệp → Cần cải cách luật lao động, phúc lợi xã hội",
-    emoji: "🤖"
+    iconName: "Cpu"
   },
   {
     id: 3,
@@ -130,7 +136,7 @@ export const caseStudiesData = [
     infrastructure: "Blockchain, tiền kỹ thuật số, e-commerce, fintech",
     superstructure: "Pháp luật về tiền điện tử, thuế, bảo vệ người tiêu dùng",
     impact: "Tiền điện tử xuất hiện → Chính phủ phải tạo luật pháp mới để quản lý",
-    emoji: "💰"
+    iconName: "Coins"
   },
   {
     id: 4,
@@ -139,7 +145,7 @@ export const caseStudiesData = [
     infrastructure: "Internet, nền tảng e-learning, công nghệ VR/AR",
     superstructure: "Chính sách giáo dục, cấp bằng kỹ thuật số, chuẩn mực chất lượng",
     impact: "Công nghệ giáo dục thay đổi → Phải cập nhật chương trình, cấp bằng, đánh giá",
-    emoji: "🎓"
+    iconName: "BookOpen"
   },
   {
     id: 5,
@@ -148,7 +154,7 @@ export const caseStudiesData = [
     infrastructure: "Pin mặt trời, gió, công nghệ xanh, năng lượng tái tạo",
     superstructure: "Chính sách CỘng-giáp khí, quy định năng lượng, thuế carbon",
     impact: "Công nghệ xanh phát triển → Chính phủ ban hành chính sách môi trường, thay đổi ngành năng lượng",
-    emoji: "♻️"
+    iconName: "Leaf"
   }
 ];
 

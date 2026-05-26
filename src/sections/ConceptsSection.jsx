@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Card, GlowText } from '../components/Button';
+import { Card } from '../components/Button';
 import { Section, SectionHeader, AnimatedGrid, Container } from '../components/Layout';
 import { conceptsData } from '../data/content';
-import { staggerContainer, staggerItem } from '../animations/variants';
+import { staggerItem } from '../animations/variants';
 
 export const ConceptsSection = () => {
   return (
@@ -77,25 +77,6 @@ export const ConceptsSection = () => {
         </AnimatedGrid>
 
         {/* Additional info */}
-        <motion.div
-          className='mt-16 p-8 glass rounded-xl border border-marx-red-700/30'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className='text-xl font-bold text-white mb-4'>💡 Điểm Quan Trọng</h3>
-          <div className='space-y-3 text-gray-300'>
-            <p>
-              • <GlowText>Cơ sở hạ tầng là nền tảng</GlowText> - Nó quyết định hình dạng của toàn bộ xã hội
-            </p>
-            <p>
-              • <GlowText>Thượng tầng phản ánh cơ sở</GlowText> - Luật pháp, chính trị, tư tưởng đều xuất phát từ kinh tế
-            </p>
-            <p>
-              • <GlowText>Tác động hai chiều</GlowText> - Mặc dù cơ sở quyết định, thượng tầng cũng có thể tác động ngược lại
-            </p>
-          </div>
-        </motion.div>
       </Container>
     </Section>
   );
