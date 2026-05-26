@@ -18,3 +18,4 @@ export {
   StaggerListItem 
 } from './Layout';
 export { Chatbot } from './Chatbot';
+export { default as MindmapSection } from './MindmapSection';

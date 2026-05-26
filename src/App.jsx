@@ -7,6 +7,7 @@ import { TimelineSection } from './sections/TimelineSection';
 import { CaseStudiesSection } from './sections/CaseStudiesSection';
 import { CaseStudyVideoSection } from './sections/CaseStudyVideoSection';
 import { ConclusionSection } from './sections/ConclusionSection';
+import { MindmapSection } from './components/index';
 import { Chatbot } from './components/Chatbot';
 import './App.css';
 
@@ -57,6 +58,9 @@ function App() {
             <a href='#timeline' className='text-gray-400 hover:text-marx-red-400 transition-colors'>
               Timeline
             </a>
+            <a href='#mindmap' className='text-gray-400 hover:text-marx-red-400 transition-colors'>
+              Sơ Đồ Tư Duy
+            </a>
           </div>
         </div>
       </nav>
@@ -67,6 +71,7 @@ function App() {
         <ConceptsSection />
         <DialecticalSection />
         <TimelineSection />
+        <MindmapSection />
         <CaseStudiesSection />
         { <CaseStudyVideoSection videoUrl='https://www.youtube.com/watch?v=5wPtaLLdQKk' /> }
         <ConclusionSection />
