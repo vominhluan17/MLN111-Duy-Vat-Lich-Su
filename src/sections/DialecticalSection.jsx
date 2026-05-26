@@ -168,7 +168,7 @@ export const DialecticalSection = () => {
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             🔄 Biện Chứng Hai Chiều
           </h3>
-          
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className='space-y-3'>
               <p className='text-marx-red-400 font-semibold'>👇 Cơ Sở Quyết Định (Chủ Yếu)</p>
@@ -176,7 +176,7 @@ export const DialecticalSection = () => {
                 Thay đổi công nghệ, khoa học, năng lực sản xuất → Thay đổi quan hệ sản xuất → Luật pháp, chính sách phải thích ứng
               </p>
             </div>
-            
+
             <div className='space-y-3'>
               <p className='text-red-400 font-semibold'>👆 Thượng Tầng Tác Động Ngược (Phụ Yếu)</p>
               <p className='text-gray-300'>
