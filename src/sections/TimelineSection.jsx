@@ -3,6 +3,21 @@ import { useState } from 'react';
 import { Section, SectionHeader, Container } from '../components/Layout';
 import { Card } from '../components/Button';
 import { timelineData } from '../data/content';
+import { Flame, Swords, Castle, Factory, Rocket } from 'lucide-react';
+
+// Icon mapping
+const iconMap = {
+  Flame,
+  Swords,
+  Castle,
+  Factory,
+  Rocket
+};
+
+const getIcon = (iconName) => {
+  const IconComponent = iconMap[iconName];
+  return IconComponent ? <IconComponent size={28} className='text-amber-500' /> : null;
+};
 
 export const TimelineSection = () => {
   const [activeTimeline, setActiveTimeline] = useState(0);
@@ -39,17 +54,17 @@ export const TimelineSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  {/* Point */}
+                  {/* Point with Icon */}
                   <motion.div
-                    className={`w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold transition-all ${
+                    className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center transition-all border-2 ${
                       activeTimeline === index
-                        ? 'bg-marx-red-700 text-white shadow-glow-red border-2 border-marx-red-500'
-                        : 'bg-dark-800 text-gray-400 border-2 border-gray-700 hover:border-marx-red-700'
+                        ? 'bg-gradient-to-br from-amber-600 to-amber-700 border-amber-400 shadow-lg'
+                        : 'bg-dark-800/60 border-gray-700 hover:border-amber-600'
                     }`}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {item.icon}
+                    {getIcon(item.iconName)}
                   </motion.div>
 
                   {/* Label */}
@@ -116,7 +131,7 @@ export const TimelineSection = () => {
               {/* Progress indicator */}
               <div className='mt-6 h-1 bg-dark-800 rounded-full overflow-hidden'>
                 <motion.div
-                  className='h-full bg-gradient-to-r from-marx-red-600 to-red-600'
+                  className='h-full bg-gradient-to-r from-amber-600 to-orange-600'
                   initial={{ width: 0 }}
                   animate={{ width: `${((activeTimeline + 1) / timelineData.length) * 100}%` }}
                   transition={{ duration: 0.5 }}
@@ -130,7 +145,7 @@ export const TimelineSection = () => {
             <motion.button
               onClick={() => setActiveTimeline(Math.max(0, activeTimeline - 1))}
               disabled={activeTimeline === 0}
-              className='px-6 py-2 glass rounded-lg border border-gray-700 text-gray-300 hover:border-marx-red-600 hover:text-marx-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
+              className='px-6 py-2 glass rounded-lg border border-gray-700 text-gray-300 hover:border-amber-600 hover:text-amber-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -140,7 +155,7 @@ export const TimelineSection = () => {
             <motion.button
               onClick={() => setActiveTimeline(Math.min(timelineData.length - 1, activeTimeline + 1))}
               disabled={activeTimeline === timelineData.length - 1}
-              className='px-6 py-2 glass rounded-lg border border-gray-700 text-gray-300 hover:border-marx-red-600 hover:text-marx-red-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
+              className='px-6 py-2 glass rounded-lg border border-gray-700 text-gray-300 hover:border-amber-600 hover:text-amber-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
