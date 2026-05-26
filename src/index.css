@@ -126,3 +126,103 @@ html.lenis body {
     transform: translateY(-20px);
   }
 }
+
+/* ============================================================
+   Chatbot: Markdown content styling
+   ============================================================ */
+.markdown-content {
+  font-size: 13px;
+  line-height: 1.7;
+  color: inherit;
+}
+
+.markdown-content p {
+  margin-bottom: 8px;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content strong,
+.markdown-content b {
+  font-weight: 700;
+  color: #f87171;
+}
+
+.markdown-content em {
+  font-style: italic;
+  color: #fca5a5;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: #fca5a5;
+}
+
+.markdown-content h1 { font-size: 15px; }
+.markdown-content h2 { font-size: 14px; }
+.markdown-content h3 { font-size: 13px; }
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+.markdown-content li {
+  margin-bottom: 4px;
+}
+
+.markdown-content ul li {
+  list-style-type: disc;
+}
+
+.markdown-content ol li {
+  list-style-type: decimal;
+}
+
+.markdown-content code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #b91c1c;
+  padding-left: 10px;
+  margin: 8px 0;
+  color: #d1d5db;
+  font-style: italic;
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 8px 0;
+}
+
+/* Scrollbar nhỏ gọn cho chatbot message area */
+[data-lenis-prevent]::-webkit-scrollbar {
+  width: 4px;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb {
+  background: rgba(185, 28, 28, 0.5);
+  border-radius: 4px;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 28, 28, 0.8);
+}
+
