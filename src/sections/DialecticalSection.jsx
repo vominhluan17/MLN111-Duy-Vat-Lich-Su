@@ -167,7 +167,7 @@ export const DialecticalSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className='text-xl font-bold text-white mb-4'>💡 Điểm Quan Trọng</h3>
+          <h3 className='text-xl font-bold text-white mb-4'>Điểm Quan Trọng</h3>
           <div className='space-y-3 text-gray-300'>
             <p>
               • <GlowText>Cơ sở hạ tầng là nền tảng</GlowText> - Quyết định toàn bộ cấu trúc và diện mạo của xã hội.

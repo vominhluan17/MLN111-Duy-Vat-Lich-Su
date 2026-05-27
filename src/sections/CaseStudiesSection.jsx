@@ -3,6 +3,20 @@ import { useState } from 'react';
 import { Section, SectionHeader, AnimatedGrid, Container } from '../components/Layout';
 import { Card } from '../components/Button';
 import { caseStudiesData } from '../data/content';
+import { Smartphone, Cpu, Coins, BookOpen, Leaf } from 'lucide-react';
+
+// Icon mapping for Case Studies
+const caseStudiesIconMap = {
+  Smartphone: <Smartphone size={48} className='text-yellow-500' strokeWidth={1.5} />,
+  Cpu: <Cpu size={48} className='text-yellow-500' strokeWidth={1.5} />,
+  Coins: <Coins size={48} className='text-yellow-500' strokeWidth={1.5} />,
+  BookOpen: <BookOpen size={48} className='text-yellow-500' strokeWidth={1.5} />,
+  Leaf: <Leaf size={48} className='text-yellow-500' strokeWidth={1.5} />
+};
+
+const getCaseStudyIcon = (iconName) => {
+  return caseStudiesIconMap[iconName] || null;
+};
 
 export const CaseStudiesSection = () => {
   const [flipped, setFlipped] = useState({});
@@ -42,7 +56,9 @@ export const CaseStudiesSection = () => {
                 >
                   <Card className='h-full flex flex-col justify-between p-6'>
                     <div>
-                      <div className='text-4xl mb-4'>{caseStudy.emoji}</div>
+                      <div className='mb-4'>
+                        {getCaseStudyIcon(caseStudy.iconName)}
+                      </div>
                       <h3 className='text-xl font-bold text-white mb-2'>
                         {caseStudy.title}
                       </h3>
@@ -69,7 +85,7 @@ export const CaseStudiesSection = () => {
                     <div className='space-y-3'>
                       <div>
                         <p className='text-xs text-gray-500 uppercase tracking-wider font-bold'>
-                          ⚙️ Cơ Sở
+                          Cơ Sở Hạ Tầng
                         </p>
                         <p className='text-sm text-gray-300 mt-1'>
                           {caseStudy.infrastructure}
@@ -78,8 +94,7 @@ export const CaseStudiesSection = () => {
 
                       <div>
                         <p className='text-xs text-gray-500 uppercase tracking-wider font-bold'>
-                          🏛️ Thượng Tầng
-                        </p>
+                          Kiến Trúc Thượng Tầng</p>
                         <p className='text-sm text-gray-300 mt-1'>
                           {caseStudy.superstructure}
                         </p>
@@ -88,8 +103,7 @@ export const CaseStudiesSection = () => {
 
                     <div className='pt-3 border-t border-gray-600/50'>
                       <p className='text-xs text-gray-500 uppercase tracking-wider font-bold'>
-                        💥 Tác Động
-                      </p>
+                        Tác Động Tương Tác</p>
                       <p className='text-sm text-marx-red-300 mt-1 font-semibold'>
                         {caseStudy.impact}
                       </p>
@@ -109,26 +123,26 @@ export const CaseStudiesSection = () => {
           viewport={{ once: true }}
         >
           <h3 className='text-2xl font-bold text-white mb-6'>
-            🔍 Nhận Xét Chung
+            Nhận Xét Chung
           </h3>
           
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <div className='space-y-2'>
-              <p className='text-marxed-600 font-semibold'>✓ Công Nghệ Dẫn Dắt</p>
+              <p className='text-marx-red-600 font-semibold'>Công Nghệ Dẫn Dắt</p>
               <p className='text-gray-400 text-sm'>
-                Các công nghệ mới (Mạng xã hội, AI, Blockchain) là yếu tố cơ sở, tạo áp lực để thợp pháp luật thay đổi
+                Các công nghệ mới (Mạng xã hội, AI, Blockchain) là yếu tố cơ sở, tạo áp lực để pháp luật thay đổi
               </p>
             </div>
 
             <div className='space-y-2'>
-              <p className='text-marx-red-600 font-semibold'>✓ Pháp Luật Phản Ứng</p>
+              <p className='text-marx-red-600 font-semibold'>Pháp Luật Phản Ứng</p>
               <p className='text-gray-400 text-sm'>
                 Nhà nước và pháp luật luôn phải "chạy theo" công nghệ, tìm cách quản lý, điều chỉnh
               </p>
             </div>
 
             <div className='space-y-2'>
-              <p className='text-marx-red-600 font-semibold'>✓ Vòng Lặp Biện Chứng</p>
+              <p className='text-marx-red-600 font-semibold'>Vòng Lặp Biện Chứng</p>
               <p className='text-gray-400 text-sm'>
                 Khi pháp luật hoàn thiện, nó có thể khuyến khích hoặc cản trở phát triển công nghệ tiếp theo
               </p>

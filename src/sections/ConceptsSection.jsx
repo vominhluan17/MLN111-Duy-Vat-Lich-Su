@@ -3,6 +3,17 @@ import { Card } from '../components/Button';
 import { Section, SectionHeader, AnimatedGrid, Container } from '../components/Layout';
 import { conceptsData } from '../data/content';
 import { staggerItem } from '../animations/variants';
+import { Factory, Landmark } from 'lucide-react';
+
+// Icon mapping for Concepts
+const conceptIconMap = {
+  Factory: <Factory size={48} className='text-red-600' strokeWidth={1.5} />,
+  Landmark: <Landmark size={48} className='text-red-600' strokeWidth={1.5} />
+};
+
+const getConceptIcon = (iconName) => {
+  return conceptIconMap[iconName] || null;
+};
 
 export const ConceptsSection = () => {
   return (
@@ -27,10 +38,10 @@ export const ConceptsSection = () => {
                 {/* Header */}
                 <div className='flex items-start gap-4 mb-4'>
                   <motion.div
-                    className='text-4xl'
+                    className='flex-shrink-0'
                     whileHover={{ scale: 1.2, rotate: 10 }}
                   >
-                    {concept.icon}
+                    {getConceptIcon(concept.iconName)}
                   </motion.div>
                   
                   <div className='flex-1'>
