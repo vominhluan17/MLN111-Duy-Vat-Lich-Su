@@ -240,16 +240,16 @@ export const quizData = [
     explanation: "Thượng tầng bao gồm tất cả các quan hệ chính trị, pháp luật, tôn giáo, đạo đức, tư tưởng và các thiết chế tương ứng.",
     answers: [
       {
-        text: "Các quan hệ chính trị, pháp luật, tôn giáo, tư tưởng và thiết chế",
-        isCorrect: true
+        text: "Toàn bộ lực lượng sản xuất của xã hội",
+        isCorrect: false
       },
       {
         text: "Chỉ các nhà nước và chính phủ",
         isCorrect: false
       },
       {
-        text: "Toàn bộ lực lượng sản xuất của xã hội",
-        isCorrect: false
+        text: " Các quan hệ chính trị, pháp luật, tôn giáo, tư tưởng và thiết chế",
+        isCorrect: true
       },
       {
         text: "Các công cụ sản xuất hiện đại",
@@ -286,16 +286,17 @@ export const quizData = [
     explanation: "Khi cơ sở hạ tầng (công nghệ, quan hệ sản xuất) thay đổi, thượng tầng (pháp luật, tư tưởng, chính sách) sớm hay muộn cũng phải thay đổi theo để thích ứng.",
     answers: [
       {
-        text: "Thượng tầng sớm hay muộ cũng phải thay đổi theo",
-        isCorrect: true
+        text: "Chỉ một phần của thượng tầng thay đổi",
+        isCorrect: false
       },
       {
         text: "Thượng tầng không cần thay đổi",
         isCorrect: false
       },
       {
-        text: "Chỉ một phần của thượng tầng thay đổi",
-        isCorrect: false
+        
+        text: "Thượng tầng sớm hay muộn cũng phải thay đổi theo",
+        isCorrect: true
       },
       {
         text: "Thượng tầng thay đổi trước, rồi cơ sở mới thay đổi",
@@ -309,8 +310,8 @@ export const quizData = [
     explanation: "Có, thượng tầng có tính độc lập tương đối. Nó có thể tác động tích cực (thúc đẩy) hoặc tiêu cực (kìm hãm) sự phát triển của cơ sở hạ tầng. Ví dụ: chính sách khuyến khích sáng tạo (thượng tầng) có thể thúc đẩy phát triển công nghệ (cơ sở).",
     answers: [
       {
-        text: "Có, thượng tầng có tác dụng tích cực hoặc tiêu cực với cơ sở",
-        isCorrect: true
+        text: "Tác dụng của thượng tầng lớn hơn cơ sở",
+        isCorrect: false
       },
       {
         text: "Không, thượng tầng hoàn toàn thụ động",
@@ -321,8 +322,8 @@ export const quizData = [
         isCorrect: false
       },
       {
-        text: "Tác dụng của thượng tầng lớn hơn cơ sở",
-        isCorrect: false
+        text: "Có, thượng tầng có tác dụng tích cực hoặc tiêu cực với cơ sở",
+        isCorrect: true
       }
     ]
   },
