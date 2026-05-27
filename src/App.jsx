@@ -86,13 +86,33 @@ function App() {
 
       {/* Footer */}
       <footer className='w-full bg-dark-950 border-t border-gray-700/30 py-8 px-4'>
-        <div className='max-w-7xl mx-auto text-center text-gray-500 text-sm'>
-          <p>
-            © 2024 Bài Giảng Triết Học Interaktif | Powered by React + Vite + TailwindCSS
-          </p>
-          <p className='mt-2 text-xs'>
-            "Không phải ý thức của con người quyết định con đường của nó, mà ngược lại, đó là con đường xã hội của con người quyết định ý thức của nó." - Karl Marx
-          </p>
+        <div className='max-w-7xl mx-auto'>
+          {/* QR Code Section */}
+          <div className='flex flex-col items-center gap-6 mb-8 pb-8 border-b border-gray-700/30'>
+            <div className='text-center'>
+              <p className='text-gray-300 font-semibold mb-4'>Quét QR để mở website</p>
+              <div className='inline-block p-3 bg-white rounded-lg'>
+                <img 
+                  src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://duyvatlichsu.vercel.app/'
+                  alt='QR Code - Duy Vật Lịch Sử'
+                  className='w-48 h-48'
+                />
+              </div>
+              <p className='text-gray-500 text-xs mt-3'>
+                https://duyvatlichsu.vercel.app/
+              </p>
+            </div>
+          </div>
+
+          {/* Footer Content */}
+          <div className='text-center text-gray-500 text-sm'>
+            <p>
+              © 2024 Bài Giảng Triết Học Interaktif | Powered by React + Vite + TailwindCSS
+            </p>
+            <p className='mt-2 text-xs'>
+              "Không phải ý thức của con người quyết định con đường của nó, mà ngược lại, đó là con đường xã hội của con người quyết định ý thức của nó." - Karl Marx
+            </p>
+          </div>
         </div>
       </footer>
     </div>
