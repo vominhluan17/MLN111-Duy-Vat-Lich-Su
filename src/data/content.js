@@ -32,7 +32,7 @@ export const conceptsData = [
 ];
 
 export const dialecticalData = {
-  title: "Biện Chứng Giữa Cơ Sở Và Thượng Tầng",
+  title: "Biện Chứng Giữa Cơ Sở & Thượng Tầng",
   description: "Mối quan hệ tương tác hai chiều",
   parts: [
     {
@@ -44,7 +44,7 @@ export const dialecticalData = {
       fromIconName: "Settings", 
       toIconName: "Landmark",
       mainTheory: "Tồn tại xã hội quyết định Ý thức xã hội",
-      description: "Tương ứng với một cơ sở hạ tầng sẽ sản sinh ra một kiến trúc thượng tầng phù hợp. Khi cơ sở hạ tầng biến đổi thì đòi hỏi kiến trúc thượng tầng sớm muộ cũng sẽ biến đổi theo.",
+      description: "Tương ứng với một cơ sở hạ tầng sẽ sản sinh ra một kiến trúc thượng tầng phù hợp. Khi cơ sở hạ tầng biến đổi thì đòi hỏi kiến trúc thượng tầng sớm muộn cũng sẽ biến đổi theo.",
       detailsText: "Thực tiễn Gen Z: Khi kinh tế Việt Nam chuyển sang hội nhập toàn cầu, công nghệ số bùng nổ (Cơ sở hạ tầng thay đổi), tất yếu hệ tư tưởng và đạo đức của sinh viên (Kiến trúc thượng tầng) cũng phải lột xác. Những giá trị cũ như \"ổn định\", \"an phận\" dần bị phá vỡ, nhường chỗ cho tư duy \"năng động\", \"tự do cá nhân\" để thích ứng với nền kinh tế mới."
     },
     {
@@ -129,24 +129,24 @@ export const caseStudiesData = [
     impact: "Công nghệ tự động → Thất nghiệp → Cần cải cách luật lao động, phúc lợi xã hội",
     iconName: "Cpu"
   },
-  {
-    id: 3,
-    title: "Kinh Tế Số & Pháp Luật",
-    category: "Digital Economy",
-    infrastructure: "Blockchain, tiền kỹ thuật số, e-commerce, fintech",
-    superstructure: "Pháp luật về tiền điện tử, thuế, bảo vệ người tiêu dùng",
-    impact: "Tiền điện tử xuất hiện → Chính phủ phải tạo luật pháp mới để quản lý",
-    iconName: "Coins"
-  },
-  {
-    id: 4,
-    title: "Giáo Dục Trực Tuyến",
-    category: "Education Tech",
-    infrastructure: "Internet, nền tảng e-learning, công nghệ VR/AR",
-    superstructure: "Chính sách giáo dục, cấp bằng kỹ thuật số, chuẩn mực chất lượng",
-    impact: "Công nghệ giáo dục thay đổi → Phải cập nhật chương trình, cấp bằng, đánh giá",
-    iconName: "BookOpen"
-  },
+  // {
+  //   id: 3,
+  //   title: "Kinh Tế Số & Pháp Luật",
+  //   category: "Digital Economy",
+  //   infrastructure: "Blockchain, tiền kỹ thuật số, e-commerce, fintech",
+  //   superstructure: "Pháp luật về tiền điện tử, thuế, bảo vệ người tiêu dùng",
+  //   impact: "Tiền điện tử xuất hiện → Chính phủ phải tạo luật pháp mới để quản lý",
+  //   iconName: "Coins"
+  // },
+  // {
+  //   id: 4,
+  //   title: "Giáo Dục Trực Tuyến",
+  //   category: "Education Tech",
+  //   infrastructure: "Internet, nền tảng e-learning, công nghệ VR/AR",
+  //   superstructure: "Chính sách giáo dục, cấp bằng kỹ thuật số, chuẩn mực chất lượng",
+  //   impact: "Công nghệ giáo dục thay đổi → Phải cập nhật chương trình, cấp bằng, đánh giá",
+  //   iconName: "BookOpen"
+  // },
   {
     id: 5,
     title: "Năng Lượng Xanh",

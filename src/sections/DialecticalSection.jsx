@@ -32,7 +32,7 @@ export const DialecticalSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className='text-5xl md:text-6xl font-bold text-center mb-4 font-serif tracking-wider uppercase leading-[1.4]'>
+          <h2 className='text-5xl md:text-6xl font-bold text-center mb-4 tracking-wider leading-[1.3]'>
             <span className='text-marx-red-500'>{dialecticalData.title}</span>
           </h2>
           <p className='text-xl text-gray-400 font-light'>{dialecticalData.description}</p>
