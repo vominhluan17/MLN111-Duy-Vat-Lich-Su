@@ -11,7 +11,7 @@ export const Chatbot = () => {
     {
       id: 1,
       type: 'bot',
-      text: 'Xin chào! 👋 Tôi là AI tutor Gemini của bạn.\n\nHãy hỏi tôi bất cứ điều gì về Triết học Mác - Lênin và Chủ nghĩa Duy vật Lịch sử! 🏛️',
+      text: 'Xin chào! Tôi là AI tutor Gemini của bạn.\n\nHãy hỏi tôi bất cứ điều gì về Triết học Mác - Lênin và Chủ nghĩa Duy vật Lịch sử!',
       timestamp: new Date(),
     },
   ]);
@@ -46,7 +46,7 @@ export const Chatbot = () => {
         {
           id: Date.now() + 1,
           type: 'bot',
-          text: `⚠️ Lỗi: ${err.message || 'Không thể kết nối Gemini API'}`,
+          text: `Lỗi: ${err.message || 'Không thể kết nối Gemini API'}`,
           timestamp: new Date(),
           isError: true,
         },
@@ -81,7 +81,7 @@ export const Chatbot = () => {
       {
         id: Date.now(),
         type: 'bot',
-        text: 'Cuộc trò chuyện mới bắt đầu! 🔄 Hỏi tôi bất cứ điều gì về Triết học Mác - Lênin nhé!',
+        text: 'Cuộc trò chuyện mới bắt đầu!  Hỏi tôi bất cứ điều gì về Triết học Mác - Lênin nhé!',
         timestamp: new Date(),
       },
     ]);
@@ -161,7 +161,7 @@ export const Chatbot = () => {
             >
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontWeight: 700, fontSize: '15px', color: '#fff' }}>🤖 AI Tutor</span>
+                  <span style={{ fontWeight: 700, fontSize: '15px', color: '#fff' }}>AI Tutor</span>
                   <span
                     style={{
                       fontSize: '10px',
@@ -241,7 +241,7 @@ export const Chatbot = () => {
                         flexShrink: 0,
                       }}
                     >
-                      🤖
+                      AI
                     </div>
                   )}
 
@@ -325,7 +325,7 @@ export const Chatbot = () => {
                         fontSize: '13px', flexShrink: 0,
                       }}
                     >
-                      🤖
+                      AI
                     </div>
                     <div
                       style={{
@@ -376,7 +376,7 @@ export const Chatbot = () => {
                   }}
                 >
                   <p style={{ fontSize: '10px', color: '#6b7280', fontWeight: 600, marginBottom: '6px' }}>
-                    💡 Câu hỏi gợi ý:
+                    Câu hỏi gợi ý:
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                     {chatbotQuestions.slice(0, 3).map((q) => (
@@ -517,7 +517,7 @@ export const Chatbot = () => {
                 }}
                 whileHover={{ x: -5, color: '#ef4444', borderColor: 'rgba(185,28,28,0.5)' }}
               >
-                💬 {q.question}
+                {q.question}
               </motion.button>
             ))}
           </motion.div>

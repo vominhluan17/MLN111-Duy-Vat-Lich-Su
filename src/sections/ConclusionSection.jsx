@@ -55,8 +55,11 @@ export const ConclusionSection = () => {
               transition={{ delay: index * 0.1 }}
             >
               <Card className='h-full text-center space-y-3'>
-                <div className='text-3xl'>
-                  {['🎯', '🔄', '🌍', '👥'][index]}
+                <div className='text-3xl font-bold text-marx-red-500'>
+                  {index === 0 && '•'}
+                  {index === 1 && '↔'}
+                  {index === 2 && '◉'}
+                  {index === 3 && '◆'}
                 </div>
                 <h3 className='font-bold text-white'>{point.title}</h3>
                 <p className='text-sm text-gray-400'>{point.description}</p>
@@ -74,7 +77,7 @@ export const ConclusionSection = () => {
         >
           <Card className='text-center space-y-6'>
             <h3 className='text-2xl font-bold text-white'>
-              📚 Tóm Tắt Bài Học
+              Tóm Tắt Bài Học
             </h3>
 
             <p className='text-gray-300 leading-relaxed text-lg'>
@@ -84,7 +87,7 @@ export const ConclusionSection = () => {
             {/* Key takeaways */}
             <div className='border-t border-gray-700/50 pt-6 mt-6 space-y-3 text-left'>
               <p className='font-semibold text-marx-red-400 text-center mb-4'>
-                💡 Những Điểm Quan Trọng Cần Nhớ:
+                Những Điểm Quan Trọng Cần Nhớ:
               </p>
 
               <div className='space-y-3'>

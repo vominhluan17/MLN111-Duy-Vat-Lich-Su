@@ -195,19 +195,19 @@ export default function MindmapSection() {
             {
               title: 'Lực Lượng Sản Xuất',
               description: 'Yếu tố quyết định sự phát triển của xã hội nhân loại',
-              icon: '⚙️',
+              icon: '',
               color: 'from-blue-500 to-cyan-500',
             },
             {
               title: 'Cơ Sở Hạ Tầng',
               description: 'Xác định chính trị, pháp luật và ý thức xã hội',
-              icon: '🏗️',
+              icon: '',
               color: 'from-red-500 to-orange-500',
             },
             {
               title: 'Kiến Trúc Thượng Tầng',
               description: 'Phản ánh và phục vụ yêu cầu của cơ sở hạ tầng',
-              icon: '🏛️',
+              icon: '',
               color: 'from-green-500 to-emerald-500',
             },
           ].map((card, index) => (
