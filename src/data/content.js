@@ -65,7 +65,7 @@ export const dialecticalData = {
 export const timelineData = [
   {
     id: 1,
-    period: "Cộng Sản Nguyên Thủy",
+    period: "Công Xã Nguyên Thủy",
     years: "Thời tiền sử",
     infrastructure: "Quan hệ sở hữu chung, sản xuất và phân phối bình đẳng",
     superstructure: "Tổ chức thị tộc/bộ lạc, tín ngưỡng tự nhiên, chưa có nhà nước",
