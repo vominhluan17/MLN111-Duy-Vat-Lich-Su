@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Section, SectionHeader, Container } from '../components/Layout';
 import { Card } from '../components/Button';
 import { timelineData } from '../data/content';
-import { Flame, Swords, Castle, Factory, Rocket } from 'lucide-react';
+import { Flame, Swords, Castle, Factory, Rocket, Wrench, Building2, Lightbulb } from 'lucide-react';
 
 // Icon mapping
 const iconMap = {
@@ -97,9 +97,10 @@ export const TimelineSection = () => {
                   </div>
 
                   <div>
-                    <p className='text-xs text-gray-500 uppercase tracking-wider font-semibold'>
-                      🔧 Cơ Sở Hạ Tầng
-                    </p>
+                    <div className='flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider font-semibold'>
+                      <Wrench size={16} className='text-amber-500' />
+                      <span>Cơ Sở Hạ Tầng</span>
+                    </div>
                     <p className='text-gray-300 mt-2'>
                       {timelineData[activeTimeline].infrastructure}
                     </p>
@@ -109,18 +110,20 @@ export const TimelineSection = () => {
                 {/* Right side */}
                 <div className='space-y-6'>
                   <div>
-                    <p className='text-xs text-gray-500 uppercase tracking-wider font-semibold'>
-                      🏛️ Kiến Trúc Thượng Tầng
-                    </p>
+                    <div className='flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider font-semibold'>
+                      <Building2 size={16} className='text-amber-500' />
+                      <span>Kiến Trúc Thượng Tầng</span>
+                    </div>
                     <p className='text-gray-300 mt-2'>
                       {timelineData[activeTimeline].superstructure}
                     </p>
                   </div>
 
                   <div className='pt-4 border-t border-gray-700/50'>
-                    <p className='text-xs text-gray-500 uppercase tracking-wider font-semibold'>
-                      📌 Đặc Điểm
-                    </p>
+                    <div className='flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider font-semibold'>
+                      <Lightbulb size={16} className='text-amber-500' />
+                      <span>Đặc Điểm</span>
+                    </div>
                     <p className='text-gray-300 mt-2'>
                       {timelineData[activeTimeline].characteristics}
                     </p>
