@@ -65,14 +65,7 @@ export const HeroSection = () => {
               Khám Phá Bài Học
             </Button>
             
-            <Button
-              variant='secondary'
-              size='lg'
-              onClick={() => smoothScrollTo('dialectical')}
-              className='px-8'
-            >
-              Xem Sơ Đồ Tư Duy
-            </Button>
+            
           </motion.div>
         </motion.div>
       </Container>

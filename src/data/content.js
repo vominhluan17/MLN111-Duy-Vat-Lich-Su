@@ -209,3 +209,145 @@ export const conclusionData = {
   ],
   summary: "Học thuyết về mối quan hệ giữa cơ sở hạ tầng và kiến trúc thượng tầng là nền tảng của chủ nghĩa duy vật lịch sử, giúp chúng ta hiểu rõ quy luật phát triển của xã hội loài người."
 };
+
+export const quizData = [
+  {
+    id: 1,
+    question: "Cơ sở hạ tầng (Infrastructure) bao gồm những yếu tố nào?",
+    explanation: "Cơ sở hạ tầng là tổng thể lực lượng sản xuất (công cụ, máy móc, kỹ năng lao động) và quan hệ sản xuất (quan hệ sở hữu, tổ chức, phân phối).",
+    answers: [
+      {
+        text: "Lực lượng sản xuất + Quan hệ sản xuất",
+        isCorrect: true
+      },
+      {
+        text: "Chỉ gồm các máy móc và công cụ lao động",
+        isCorrect: false
+      },
+      {
+        text: "Chỉ gồm các quan hệ sở hữu giữa các giai cấp",
+        isCorrect: false
+      },
+      {
+        text: "Toàn bộ tư tưởng, pháp luật và chính trị",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 2,
+    question: "Kiến trúc thượng tầng (Superstructure) là gì?",
+    explanation: "Thượng tầng bao gồm tất cả các quan hệ chính trị, pháp luật, tôn giáo, đạo đức, tư tưởng và các thiết chế tương ứng.",
+    answers: [
+      {
+        text: "Các quan hệ chính trị, pháp luật, tôn giáo, tư tưởng và thiết chế",
+        isCorrect: true
+      },
+      {
+        text: "Chỉ các nhà nước và chính phủ",
+        isCorrect: false
+      },
+      {
+        text: "Toàn bộ lực lượng sản xuất của xã hội",
+        isCorrect: false
+      },
+      {
+        text: "Các công cụ sản xuất hiện đại",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 3,
+    question: "Theo chủ nghĩa duy vật lịch sử, yếu tố nào quyết định yếu tố còn lại?",
+    explanation: "Cơ sở hạ tầng (yếu tố kinh tế) là yếu tố quyết định, nó quyết định thượng tầng (yếu tố tư tưởng-chính trị).",
+    answers: [
+      {
+        text: "Cơ sở hạ tầng quyết định thượng tầng",
+        isCorrect: true
+      },
+      {
+        text: "Thượng tầng quyết định cơ sở hạ tầng",
+        isCorrect: false
+      },
+      {
+        text: "Cả hai quyết định lẫn nhau ngang nhau",
+        isCorrect: false
+      },
+      {
+        text: "Ý thức của con người quyết định cả hai",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 4,
+    question: "Khi cơ sở hạ tầng thay đổi, điều gì sẽ xảy ra?",
+    explanation: "Khi cơ sở hạ tầng (công nghệ, quan hệ sản xuất) thay đổi, thượng tầng (pháp luật, tư tưởng, chính sách) sớm hay muộn cũng phải thay đổi theo để thích ứng.",
+    answers: [
+      {
+        text: "Thượng tầng sớm hay muộ cũng phải thay đổi theo",
+        isCorrect: true
+      },
+      {
+        text: "Thượng tầng không cần thay đổi",
+        isCorrect: false
+      },
+      {
+        text: "Chỉ một phần của thượng tầng thay đổi",
+        isCorrect: false
+      },
+      {
+        text: "Thượng tầng thay đổi trước, rồi cơ sở mới thay đổi",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 5,
+    question: "Thượng tầng có thể tác động ngược lại cơ sở không? Như thế nào?",
+    explanation: "Có, thượng tầng có tính độc lập tương đối. Nó có thể tác động tích cực (thúc đẩy) hoặc tiêu cực (kìm hãm) sự phát triển của cơ sở hạ tầng. Ví dụ: chính sách khuyến khích sáng tạo (thượng tầng) có thể thúc đẩy phát triển công nghệ (cơ sở).",
+    answers: [
+      {
+        text: "Có, thượng tầng có tác dụng tích cực hoặc tiêu cực với cơ sở",
+        isCorrect: true
+      },
+      {
+        text: "Không, thượng tầng hoàn toàn thụ động",
+        isCorrect: false
+      },
+      {
+        text: "Có, nhưng chỉ tác dụng tiêu cực",
+        isCorrect: false
+      },
+      {
+        text: "Tác dụng của thượng tầng lớn hơn cơ sở",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 6,
+    question: "Ví dụ nào sau đây minh họa mối quan hệ biện chứng cơ sở-thượng tầng?",
+    explanation: "Cách mạng công nghiệp: Phát triển máy móc (cơ sở) → Tư bản chủ nghĩa xuất hiện → Pháp luật, chính sách thay đổi để bảo vệ quyền sở hữu tư nhân (thượng tầng).",
+    answers: [
+      {
+        text: "Cách mạng công nghiệp: máy móc → mô hình tư bản → thay đổi pháp luật",
+        isCorrect: true
+      },
+      {
+        text: "Thay đổi pháp luật → công nghệ phát triển",
+        isCorrect: false
+      },
+      {
+        text: "Tư tưởng thay đổi → xã hội phát triển",
+        isCorrect: false
+      },
+      {
+        text: "Nhà nước thay đổi → toàn bộ xã hội thay đổi",
+        isCorrect: false
+      }
+    ]
+  }
+];
+
