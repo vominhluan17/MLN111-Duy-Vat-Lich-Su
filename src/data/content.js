@@ -212,142 +212,234 @@ export const conclusionData = {
 
 export const quizData = [
   {
-    id: 1,
-    question: "Cơ sở hạ tầng (Infrastructure) bao gồm những yếu tố nào?",
-    explanation: "Cơ sở hạ tầng là tổng thể lực lượng sản xuất (công cụ, máy móc, kỹ năng lao động) và quan hệ sản xuất (quan hệ sở hữu, tổ chức, phân phối).",
-    answers: [
-      {
-        text: "Lực lượng sản xuất + Quan hệ sản xuất",
-        isCorrect: true
-      },
-      {
-        text: "Chỉ gồm các máy móc và công cụ lao động",
-        isCorrect: false
-      },
-      {
-        text: "Chỉ gồm các quan hệ sở hữu giữa các giai cấp",
-        isCorrect: false
-      },
-      {
-        text: "Toàn bộ tư tưởng, pháp luật và chính trị",
-        isCorrect: false
-      }
-    ]
-  },
-  {
-    id: 2,
-    question: "Kiến trúc thượng tầng (Superstructure) là gì?",
-    explanation: "Thượng tầng bao gồm tất cả các quan hệ chính trị, pháp luật, tôn giáo, đạo đức, tư tưởng và các thiết chế tương ứng.",
-    answers: [
-      {
-        text: "Các quan hệ chính trị, pháp luật, tôn giáo, tư tưởng và thiết chế",
-        isCorrect: true
-      },
-      {
-        text: "Chỉ các nhà nước và chính phủ",
-        isCorrect: false
-      },
-      {
-        text: "Toàn bộ lực lượng sản xuất của xã hội",
-        isCorrect: false
-      },
-      {
-        text: "Các công cụ sản xuất hiện đại",
-        isCorrect: false
-      }
-    ]
-  },
-  {
-    id: 3,
-    question: "Theo chủ nghĩa duy vật lịch sử, yếu tố nào quyết định yếu tố còn lại?",
-    explanation: "Cơ sở hạ tầng (yếu tố kinh tế) là yếu tố quyết định, nó quyết định thượng tầng (yếu tố tư tưởng-chính trị).",
-    answers: [
-      {
-        text: "Cơ sở hạ tầng quyết định thượng tầng",
-        isCorrect: true
-      },
-      {
-        text: "Thượng tầng quyết định cơ sở hạ tầng",
-        isCorrect: false
-      },
-      {
-        text: "Cả hai quyết định lẫn nhau ngang nhau",
-        isCorrect: false
-      },
-      {
-        text: "Ý thức của con người quyết định cả hai",
-        isCorrect: false
-      }
-    ]
-  },
-  {
-    id: 4,
-    question: "Khi cơ sở hạ tầng thay đổi, điều gì sẽ xảy ra?",
-    explanation: "Khi cơ sở hạ tầng (công nghệ, quan hệ sản xuất) thay đổi, thượng tầng (pháp luật, tư tưởng, chính sách) sớm hay muộn cũng phải thay đổi theo để thích ứng.",
-    answers: [
-      {
-        text: "Thượng tầng sớm hay muộ cũng phải thay đổi theo",
-        isCorrect: true
-      },
-      {
-        text: "Thượng tầng không cần thay đổi",
-        isCorrect: false
-      },
-      {
-        text: "Chỉ một phần của thượng tầng thay đổi",
-        isCorrect: false
-      },
-      {
-        text: "Thượng tầng thay đổi trước, rồi cơ sở mới thay đổi",
-        isCorrect: false
-      }
-    ]
-  },
-  {
-    id: 5,
-    question: "Thượng tầng có thể tác động ngược lại cơ sở không? Như thế nào?",
-    explanation: "Có, thượng tầng có tính độc lập tương đối. Nó có thể tác động tích cực (thúc đẩy) hoặc tiêu cực (kìm hãm) sự phát triển của cơ sở hạ tầng. Ví dụ: chính sách khuyến khích sáng tạo (thượng tầng) có thể thúc đẩy phát triển công nghệ (cơ sở).",
-    answers: [
-      {
-        text: "Có, thượng tầng có tác dụng tích cực hoặc tiêu cực với cơ sở",
-        isCorrect: true
-      },
-      {
-        text: "Không, thượng tầng hoàn toàn thụ động",
-        isCorrect: false
-      },
-      {
-        text: "Có, nhưng chỉ tác dụng tiêu cực",
-        isCorrect: false
-      },
-      {
-        text: "Tác dụng của thượng tầng lớn hơn cơ sở",
-        isCorrect: false
-      }
-    ]
-  },
-  {
-    id: 6,
-    question: "Ví dụ nào sau đây minh họa mối quan hệ biện chứng cơ sở-thượng tầng?",
-    explanation: "Cách mạng công nghiệp: Phát triển máy móc (cơ sở) → Tư bản chủ nghĩa xuất hiện → Pháp luật, chính sách thay đổi để bảo vệ quyền sở hữu tư nhân (thượng tầng).",
-    answers: [
-      {
-        text: "Cách mạng công nghiệp: máy móc → mô hình tư bản → thay đổi pháp luật",
-        isCorrect: true
-      },
-      {
-        text: "Thay đổi pháp luật → công nghệ phát triển",
-        isCorrect: false
-      },
-      {
-        text: "Tư tưởng thay đổi → xã hội phát triển",
-        isCorrect: false
-      },
-      {
-        text: "Nhà nước thay đổi → toàn bộ xã hội thay đổi",
-        isCorrect: false
-      }
-    ]
-  }
+  id: 1,
+  question: "Theo chủ nghĩa duy vật lịch sử, 'Cơ sở hạ tầng' của xã hội được hiểu là gì?",
+  explanation: "Cơ sở hạ tầng là toàn bộ các quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội trong một giai đoạn lịch sử nhất định.",
+  answers: [
+    {
+      text: "Toàn bộ cơ sở vật chất, kỹ thuật, đường sá, cầu cống của xã hội",
+      isCorrect: false
+    },
+    {
+      text: "Là tổng hợp các quan hệ sản xuất hợp thành cơ cấu kinh tế của xã hội ở một giai đoạn lịch sử nhất định",
+      isCorrect: true
+    },
+    {
+      text: "Toàn bộ công cụ lao động và lực lượng lao động của xã hội",
+      isCorrect: false
+    },
+    {
+      text: "Toàn bộ tư tưởng, đạo đức, pháp quyền của xã hội",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 2,
+  question: "Cấu trúc của Cơ sở hạ tầng bao gồm những thành phần nào?",
+  explanation: "Cơ sở hạ tầng bao gồm quan hệ sản xuất tàn dư, quan hệ sản xuất thống trị và quan hệ sản xuất mầm mống.",
+  answers: [
+    {
+      text: "Lực lượng sản xuất, công cụ lao động và người lao động",
+      isCorrect: false
+    },
+    {
+      text: "Tư tưởng chính trị, đạo đức và tôn giáo",
+      isCorrect: false
+    },
+    {
+      text: "Quan hệ sản xuất tàn dư, quan hệ sản xuất thống trị và quan hệ sản xuất mầm mống",
+      isCorrect: true
+    },
+    {
+      text: "Quan hệ sản xuất, lực lượng sản xuất và phương thức sản xuất",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 3,
+  question: "Theo triết học Mác - Lênin, 'Kiến trúc thượng tầng' bao gồm những yếu tố cơ bản nào?",
+  explanation: "Kiến trúc thượng tầng bao gồm các quan điểm tư tưởng xã hội và các thiết chế chính trị - xã hội tương ứng.",
+  answers: [
+    {
+      text: "Những quan điểm, tư tưởng xã hội và các thiết chế chính trị - xã hội tương ứng",
+      isCorrect: true
+    },
+    {
+      text: "Toàn bộ hệ thống máy móc và lực lượng sản xuất của xã hội",
+      isCorrect: false
+    },
+    {
+      text: "Quan hệ sở hữu, quan hệ tổ chức - quản lý và quan hệ phân phối",
+      isCorrect: false
+    },
+    {
+      text: "Môi trường tự nhiên và điều kiện dân số",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 4,
+  question: "Mối quan hệ biện chứng giữa Cơ sở hạ tầng (CSHT) và Kiến trúc thượng tầng (KTTT) mang tính chất gì?",
+  explanation: "CSHT quyết định KTTT, đồng thời KTTT có tính độc lập tương đối và tác động ngược trở lại CSHT.",
+  answers: [
+    {
+      text: "KTTT quyết định CSHT, CSHT hoàn toàn thụ động",
+      isCorrect: false
+    },
+    {
+      text: "CSHT quyết định KTTT, nhưng KTTT có tính độc lập tương đối và có tác động ngược trở lại CSHT",
+      isCorrect: true
+    },
+    {
+      text: "CSHT và KTTT tồn tại độc lập, không tác động lẫn nhau",
+      isCorrect: false
+    },
+    {
+      text: "KTTT sinh ra CSHT để phục vụ cho giai cấp thống trị",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 5,
+  question: "Sự tác động ngược trở lại của Kiến trúc thượng tầng đối với Cơ sở hạ tầng diễn ra theo những xu hướng nào?",
+  explanation: "Kiến trúc thượng tầng có thể thúc đẩy hoặc kìm hãm sự phát triển của cơ sở hạ tầng.",
+  answers: [
+    {
+      text: "Luôn luôn thúc đẩy cơ sở hạ tầng phát triển",
+      isCorrect: false
+    },
+    {
+      text: "Luôn luôn kìm hãm cơ sở hạ tầng phát triển",
+      isCorrect: false
+    },
+    {
+      text: "Có thể thúc đẩy hoặc kìm hãm sự phát triển của cơ sở hạ tầng",
+      isCorrect: true
+    },
+    {
+      text: "Chỉ làm thay đổi hình thức của cơ sở hạ tầng mà không thay đổi bản chất",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 6,
+  question: "C. Mác đã khẳng định sự vận động và phát triển của các hình thái kinh tế - xã hội là một quá trình gì?",
+  explanation: "Theo C. Mác, sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên.",
+  answers: [
+    {
+      text: "Quá trình ngẫu nhiên",
+      isCorrect: false
+    },
+    {
+      text: "Quá trình phụ thuộc vào ý muốn chủ quan của con người",
+      isCorrect: false
+    },
+    {
+      text: "Quá trình lịch sử - tự nhiên",
+      isCorrect: true
+    },
+    {
+      text: "Quá trình tiến hóa sinh học thuần túy",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 7,
+  question: "Xét trong tính chất toàn bộ của nó, lịch sử nhân loại là quá trình thay thế tuần tự của các hình thái kinh tế - xã hội nào?",
+  explanation: "Lịch sử nhân loại phát triển tuần tự từ công xã nguyên thủy đến cộng sản chủ nghĩa.",
+  answers: [
+    {
+      text: "Công xã nguyên thủy -> Chiếm hữu nô lệ -> Phong kiến -> Tư bản chủ nghĩa -> Cộng sản chủ nghĩa",
+      isCorrect: true
+    },
+    {
+      text: "Công xã nguyên thủy -> Phong kiến -> Chiếm hữu nô lệ -> Tư bản chủ nghĩa -> Cộng sản chủ nghĩa",
+      isCorrect: false
+    },
+    {
+      text: "Chiếm hữu nô lệ -> Phong kiến -> Tư bản chủ nghĩa -> Công xã nguyên thủy -> Cộng sản chủ nghĩa",
+      isCorrect: false
+    },
+    {
+      text: "Công xã nguyên thủy -> Phong kiến -> Tư bản chủ nghĩa -> Xã hội chủ nghĩa -> Cộng sản chủ nghĩa",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 8,
+  question: "Điền vào chỗ trống quan điểm của C. Mác: 'Khi cơ sở kinh tế thay đổi thì toàn bộ cái [...] đồ sộ cũng bị đảo lộn ít nhiều nhanh chóng.'",
+  explanation: "Theo C. Mác, khi cơ sở kinh tế thay đổi thì kiến trúc thượng tầng cũng thay đổi theo.",
+  answers: [
+    {
+      text: "Phương thức sản xuất",
+      isCorrect: false
+    },
+    {
+      text: "Lực lượng sản xuất",
+      isCorrect: false
+    },
+    {
+      text: "Kiến trúc thượng tầng",
+      isCorrect: true
+    },
+    {
+      text: "Quan hệ sản xuất",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 9,
+  question: "Trong hệ thống kiến trúc thượng tầng của xã hội Việt Nam hiện nay, yếu tố nào đóng vai trò trung tâm?",
+  explanation: "Hệ thống chính trị - xã hội gồm Đảng, Nhà nước và các tổ chức xã hội giữ vai trò trung tâm trong kiến trúc thượng tầng Việt Nam.",
+  answers: [
+    {
+      text: "Các tổ chức phi chính phủ",
+      isCorrect: false
+    },
+    {
+      text: "Hệ thống thiết chế chính trị - xã hội bao gồm Đảng Cộng sản Việt Nam, Nhà nước và các tổ chức xã hội khác",
+      isCorrect: true
+    },
+    {
+      text: "Hệ thống giáo dục, y tế và khoa học công nghệ",
+      isCorrect: false
+    },
+    {
+      text: "Các quan điểm đạo đức, tôn giáo và nghệ thuật",
+      isCorrect: false
+    }
+  ]
+},
+{
+  id: 10,
+  question: "Vận dụng lý luận vào thực tiễn: Vì sao hệ tư tưởng, giá trị sống của sinh viên (Gen Z) hiện nay lại có sự biến đổi mạnh mẽ so với các thế hệ trước?",
+  explanation: "Sự thay đổi của nền kinh tế, công nghệ số và toàn cầu hóa làm biến đổi cơ sở hạ tầng xã hội, kéo theo thay đổi về tư tưởng và giá trị sống.",
+  answers: [
+    {
+      text: "Do sự bùng nổ của mạng xã hội khiến con người tự do hơn",
+      isCorrect: false
+    },
+    {
+      text: "Do trình độ sản xuất và nền kinh tế - xã hội thay đổi mạnh mẽ bởi công nghệ số và toàn cầu hóa",
+      isCorrect: true
+    },
+    {
+      text: "Do sinh viên ngày nay không còn được giáo dục về truyền thống",
+      isCorrect: false
+    },
+    {
+      text: "Do sự thay đổi của tự nhiên và môi trường khí hậu",
+      isCorrect: false
+    }
+  ]
+}
 ];
 
