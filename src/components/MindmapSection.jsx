@@ -60,6 +60,7 @@ export default function MindmapSection() {
 
   return (
     <section
+      id="mindmap"
       ref={sectionRef}
       className="relative min-h-screen w-full overflow-hidden py-20 px-4 md:px-8"
     >

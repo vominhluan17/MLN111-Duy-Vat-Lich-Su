@@ -23,7 +23,7 @@ export const TimelineSection = () => {
   const [activeTimeline, setActiveTimeline] = useState(0);
 
   return (
-    <Section className='py-20 relative'>
+    <Section id='timeline' className='py-20 relative'>
       <Container>
         <SectionHeader
           title='Timeline Phát Triển Xã Hội'

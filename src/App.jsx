@@ -7,6 +7,7 @@ import { TimelineSection } from './sections/TimelineSection';
 import { CaseStudiesSection } from './sections/CaseStudiesSection';
 import { CaseStudyVideoSection } from './sections/CaseStudyVideoSection';
 import { ConclusionSection } from './sections/ConclusionSection';
+import { QuizSection } from './sections/QuizSection';
 import { MindmapSection } from './components/index';
 import { Chatbot } from './components/Chatbot';
 import './App.css';
@@ -60,6 +61,9 @@ function App() {
             <a href='#mindmap' className='text-gray-400 hover:text-marx-red-400 transition-colors'>
               Sơ Đồ Tư Duy
             </a>
+            <a href='#quiz' className='text-gray-400 hover:text-marx-red-400 transition-colors'>
+              Ôn Tập
+            </a>
           </div>
         </div>
       </nav>
@@ -74,6 +78,7 @@ function App() {
         <CaseStudiesSection />
         { <CaseStudyVideoSection videoUrl='https://www.youtube.com/watch?v=5wPtaLLdQKk' /> }
         <ConclusionSection />
+        <QuizSection />
       </main>
 
       {/* Chatbot */}

@@ -94,35 +94,35 @@ export const ConclusionSection = () => {
                 <p className='flex items-start gap-3'>
                   <Badge className='flex-shrink-0 mt-1'>1</Badge>
                   <span className='text-gray-300'>
-                    <strong>Cơ sở hạ tầng là nền tảng:</strong> Sản xuất vật chất quyết định mọi khía cạnh của xã hội
+                    <strong>Cơ sở hạ tầng là nền tảng:</strong> Nền kinh tế (tổng hợp các quan hệ sản xuất) quyết định diện mạo và cấu trúc của toàn bộ xã hội.
                   </span>
                 </p>
 
                 <p className='flex items-start gap-3'>
                   <Badge className='flex-shrink-0 mt-1'>2</Badge>
                   <span className='text-gray-300'>
-                    <strong>Thượng tầng phản ánh cơ sở:</strong> Luật pháp, chính trị, tư tưởng đều xuất phát từ kinh tế
+                    <strong>Thượng tầng phản ánh cơ sở:</strong> Pháp luật, chính trị, đạo đức và hệ tư tưởng đều sinh ra từ điều kiện kinh tế và phản ánh nền kinh tế đó.
                   </span>
                 </p>
 
                 <p className='flex items-start gap-3'>
                   <Badge className='flex-shrink-0 mt-1'>3</Badge>
                   <span className='text-gray-300'>
-                    <strong>Biện chứng hai chiều:</strong> Mặc dù cơ sở quyết định, thượng tầng cũng có tác động ngược lại
+                    <strong>Biện chứng hai chiều:</strong> Mặc dù cơ sở kinh tế quyết định, nhưng kiến trúc thượng tầng có tính độc lập tương đối và tác động ngược trở lại mạnh mẽ.
                   </span>
                 </p>
 
                 <p className='flex items-start gap-3'>
                   <Badge className='flex-shrink-0 mt-1'>4</Badge>
                   <span className='text-gray-300'>
-                    <strong>Hiểu quy luật để hành động:</strong> Nhận thức được quy luật giúp con người hành động có chủ đích
-                  </span>
+                    <strong>Hiểu quy luật để hành động:</strong> Hiểu rõ quy luật khách quan của lịch sử giúp con người hành động có chủ đích để phát triển xã hội.
+      </span>
                 </p>
 
                 <p className='flex items-start gap-3'>
                   <Badge className='flex-shrink-0 mt-1'>5</Badge>
                   <span className='text-gray-300'>
-                    <strong>Ứng dụng trong thực tế:</strong> Công nghệ, chính sách, và xã hội luôn biến động theo quy luật này
+                    <strong>Ứng dụng trong thực tế:</strong> Khi công nghệ và kinh tế số thay đổi (Cơ sở hạ tầng), tất yếu lối sống và hệ giá trị của sinh viên (Kiến trúc thượng tầng) cũng biến đổi theo.
                   </span>
                 </p>
               </div>
@@ -138,7 +138,7 @@ export const ConclusionSection = () => {
           viewport={{ once: true }}
         >
           <p className='text-gray-500 text-sm'>
-            Hãy tiếp tục tìm hiểu để hiểu rõ hơn về cách xã hội hoạt động! 🚀
+            Hãy tiếp tục khám phá để hiểu rõ hơn về sự vận động của xã hội! Triết học Mác - Lênin không chỉ là một hệ thống lý luận hàn lâm, mà còn là công cụ sắc bén để chúng ta phân tích và cải tạo thế giới.
           </p>
         </motion.div>
       </Container>

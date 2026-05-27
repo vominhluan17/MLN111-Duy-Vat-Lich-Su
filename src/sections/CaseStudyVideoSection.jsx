@@ -268,7 +268,7 @@ export const CaseStudyVideoSection = ({ videoUrl = 'https://www.youtube.com/embe
         >
           <div className='inline-block p-6 glass rounded-xl border border-marx-red-700/30 hover:border-marx-red-600/50 transition-all duration-300'>
             <p className='text-gray-300 text-sm md:text-base'>
-              <span className='text-marx-red-400 font-semibold'>Nhan xet:</span> Bien doi kinh te-xa hoi quyet dinh su thay doi trong he tu tuong. Sinh vien hien nay sinh song trong boi canh cong nghe-toan cau-thi truong, nen gia tri song cua ho cung thay doi theo.
+              <span className='text-marx-red-400 font-semibold'>Nhận xét:</span> Sự chuyển biến của nền tảng kinh tế - xã hội đóng vai trò quyết định đối với sự thay đổi của hệ tư tưởng. Sinh viên hiện nay đang tồn tại trong một cơ sở hạ tầng mới gắn liền với công nghệ số, kinh tế thị trường và hội nhập toàn cầu; do đó, hệ giá trị và lối sống của họ tất yếu phải biến đổi để thích nghi với thời đại.
             </p>
           </div>
         </motion.div>
